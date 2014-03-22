@@ -5,7 +5,6 @@ class CreateAuthentications < ActiveRecord::Migration
       t.string :provider
       t.string :uid
       t.string :token
-      t.string :token_secret
       t.timestamps
     end
   end
