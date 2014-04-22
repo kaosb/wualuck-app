@@ -1,4 +1,6 @@
 WualuckApp::Application.routes.draw do
+  get "autentication/index"
+  get "profile/index"
   get "home/index"
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
   # The priority is based upon order of creation: first created -> highest priority.

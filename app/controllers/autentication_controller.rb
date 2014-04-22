@@ -1,4 +1,6 @@
-class AutenticationsController < ApplicationController
+class AutenticationController < ApplicationController
+	def index
+	end
 	def twitter
 		raise omni = request.env["omniauth.auth"].to_yaml
 	end
