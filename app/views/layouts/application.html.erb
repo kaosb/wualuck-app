@@ -11,7 +11,7 @@
 	<p class="alert"><%= alert %></p>
 	<% if user_signed_in? %>
 	Logged in as <strong><%= current_user.email %></strong>.
-	<%= link_to "Preferences", '/profile/edit.erb', method: :delete, :class => 'navbar-link'  %> |
+	<%= link_to "Preferences", '/profile/preferences.erb', :class => 'navbar-link'  %> |
 	<%= link_to 'Authentications', '/autentication/index.erb', :class => 'navbar-link' %> |
 	<%= link_to 'Profile', '/profile/index.erb', :class => 'navbar-link' %> |
 	<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |

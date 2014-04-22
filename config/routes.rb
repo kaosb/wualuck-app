@@ -1,6 +1,6 @@
 WualuckApp::Application.routes.draw do
-  get "profile/edit"
   get "autentication/index"
+  get "profile/preferences"
   get "profile/index"
   get "home/index"
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
