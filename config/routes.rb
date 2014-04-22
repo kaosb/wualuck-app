@@ -1,4 +1,5 @@
 WualuckApp::Application.routes.draw do
+  get "profile/edit"
   get "autentication/index"
   get "profile/index"
   get "home/index"
