@@ -1,0 +1,40 @@
+.header {
+  position: relative;
+  background: black;
+  color: white;
+  height: 61px;
+  line-height: 61px;
+
+  text-align: center;
+
+  .searchBox {
+    float: left;
+  }
+
+  .logo {
+    margin-top: 16px;
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+}
+
+.HeaderUser {
+  position: absolute;
+  right: 10px;
+
+  .UserName {
+    line-height: inherit;
+    display: inline;
+    text-transform: uppercase;
+    font-family: "Gotham";
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .UserPicture {
+    float: right;
+    margin: 5px 20px;
+  }
+}

@@ -1,0 +1,61 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+hr.small {
+  width: 20px;
+  display: inline-block;
+  border-bottom: 2px solid black;
+  text-aligh: left;
+}
+
+hr.inverted {
+  margin-top: 12px;
+  border-bottom-color: white;
+}
+
+.content {
+  font-size: 15.45px;
+  font-weight: 300;
+  width: 89.1%;
+  margin: 0 auto 20px auto;
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.small-contact-info {
+  display: none;
+  a {
+    font-weight: 900;
+    text-decoration: none;
+  }
+}
+
+.active {
+  display: block !important;
+}
+
+strong {
+  font-weight: 600;
+}
+
+
+a.more-info,
+a.console {
+  font-family: "Inconsolata";
+  color: black;
+}
+
+.clearfix { clear: both; }
