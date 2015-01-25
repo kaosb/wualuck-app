@@ -36,7 +36,11 @@ module.exports.routes = {
     view: 'homepage'
   },
 
-  'post /ranking/vote/:ranking':  'RankingController.vote'
+  'post /ranking/vote/:ranking':  'RankingController.vote',
+
+  'post /user/login': 'UserController.login',
+
+  'get /user/session': 'UserController.session'
 
   /***************************************************************************
   *                                                                          *

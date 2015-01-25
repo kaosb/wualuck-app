@@ -3,6 +3,7 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+  outline: none;
 }
 
 body {
@@ -22,6 +23,10 @@ hr.small {
 hr.inverted {
   margin-top: 12px;
   border-bottom-color: white;
+}
+
+a {
+  outline: 0;
 }
 
 .content {
@@ -59,3 +64,44 @@ a.console {
 }
 
 .clearfix { clear: both; }
+
+.standar-text {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: $base-font-family;
+}
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 30px 20px 20px 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 60px auto 0 auto;
+  left: auto;
+  right: auto;
+  @include clearfix();
+
+
+  .close {
+    position: absolute;
+    top: -3px;
+    right: 2px;
+    border: none;
+    background: none;
+    -webkit-user-select:none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: 0;
+    font-size: 30px;
+  }
+}
+.white-popup-overlay {
+  background: rgba(0, 0, 0, .8);
+}
+
+.w300 { max-width: 300px; }
+.w400 { max-width: 400px; }
+.w500 { max-width: 500px; }
+.w600 { max-width: 600px; }

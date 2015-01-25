@@ -1,0 +1,73 @@
+/** @jsx React.DOM */
+var React = require('react');
+var $ = require('jquery');
+var Modal = require('react-modal');
+var UserActions = require('../../Actions/UserActions');
+var UserStore = require('../../Stores/UserStore');
+var UserStoreWatchMixin = require('../../Mixins/UserStoreWatchMixin');
+
+var appElement = document.getElementById('main');
+
+Modal.setAppElement(appElement);
+Modal.injectCSS();
+
+function getUserState() {
+  return {
+    error_message: UserStore.getErrorMessage()
+  }
+}
+
+var UserLoginForm = React.createClass({
+  mixins: [UserStoreWatchMixin(getUserState)],
+
+  _onLogin: function(e) {
+    e.preventDefault();
+    console.log('Logging in');
+    var credentials = {
+      email: this.refs.email.getDOMNode().value,
+      password: this.refs.password.getDOMNode().value
+    };
+    UserActions.login(credentials);
+  },
+
+  getInitialState: function() {
+    return { modalIsOpen: false };
+  },
+
+  openModal: function() {
+    this.setState({modalIsOpen: true});
+  },
+
+  closeModal: function() {
+    this.setState({modalIsOpen: false});
+  },
+
+  render: function() {
+    var errorClass = 'error' + (this.state.error_message === '' ? ' hide': ' show');
+    return (
+      <div>
+        <a href="#" onClick={this.openModal} className="OpenUserLoginForm">Ingresar</a>
+        <Modal
+          className="white-popup w300"
+          overlayClassName="white-popup-overlay"
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={this.closeModal}
+        >
+          <button className="close" onClick={this.closeModal} ><i className="ion-ios-close-empty"></i></button>
+          <form onSubmit={this._onLogin} className="form">
+            <p className={errorClass}>{this.state.error_message}</p>
+            <label htmlFor="email">e-mail</label>
+            <input type="text" id="email" ref="email" autoComplete="off" />
+
+            <label htmlFor="password">Clave</label>
+            <input type="password" id="password" ref="password" />
+
+            <button className="btn" onClick={this.handleLogin}>Ingresar</button>
+          </form>
+        </Modal>
+      </div>
+    );
+  }
+});
+
+module.exports = UserLoginForm;

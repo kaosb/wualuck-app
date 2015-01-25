@@ -4,7 +4,7 @@ $regular: 400;
 $bold: 600;
 
 // Base Font
-$base-font-family: 'BrownStd';
+$base-font-family: Gotham;
 $base-font-weight: $regular;
 $base-font-size: 18px;
 $base-line-height: 1.4;
@@ -21,6 +21,9 @@ $header-font-weight: $bold;
 
 // Colors
 $ranking-bg: #D90A11;
+$wualuck-green: #33C278;
+$wualuck-gray: #E9E9E9;
+$wualuck-text-gray: #9C9B9B;
 
 // Breakpoints
 $iphone-landscape: 569px;

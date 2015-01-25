@@ -6,8 +6,13 @@ var Challenge = require('./Challenge/Challenge');
 var Template = require('./Template');
 var Locations = Router.Locations;
 var Location = Router.Location;
+var UserActions = require('../Actions/UserActions');
 
 var App = React.createClass({
+
+  componentDidMount: function() {
+      UserActions.init();
+  },
 
   render: function () {
     return (

@@ -1,6 +1,6 @@
 /** @jsx React.DOM */
 var React = require('react');
-var WualuckActions = require('../../Actions/WualuckActions');
+var RankingActions = require('../../Actions/RankingActions');
 
 var RankingFilter = React.createClass({
   render: function() {
@@ -14,7 +14,7 @@ var RankingFilter = React.createClass({
 
   _onFilterChange: function() {
     var text = this.refs.filterInput.getDOMNode().value;
-    WualuckActions.filter(text);
+    RankingActions.filter(text);
   }
 
 });

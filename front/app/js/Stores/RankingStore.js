@@ -1,15 +1,15 @@
 var WualuckDispatcher = require('../Dispatchers/WualuckDispatcher');
 var EventEmitter = require('events').EventEmitter;
-var WualuckConstants = require('../Constants/WualuckConstants');
+var RankingConstants = require('../Constants/RankingConstants');
 var assign = require('object-assign');
 var _ = require('lodash');
 
-var CHANGE_EVENT = 'change';
+var CHANGE_EVENT = 'ranking_change';
 
 var _ranking = [];
 var _filterText = '';
 
-var WualuckStore = assign({}, EventEmitter.prototype, {
+var RankingStore = assign({}, EventEmitter.prototype, {
 
   getAll: function() {
     return _ranking;
@@ -35,20 +35,23 @@ var WualuckStore = assign({}, EventEmitter.prototype, {
     var action = payload.action;
 
     switch(action.actionType) {
-      case WualuckConstants.WUALUCK_VOTE:
+      case RankingConstants.RANKING_VOTE:
         var index = _.findIndex(_ranking, { 'id': action.data.id });
         _ranking[index] = action.data;
-        WualuckStore.emitChange();
+        _ranking.sort(function(a,b) {
+          return a.votes < b.votes;
+        });
+        RankingStore.emitChange();
         break;
 
-      case WualuckConstants.WUALUCK_FILTER:
+      case RankingConstants.RANKING_FILTER:
         _filterText = action.text;
-        WualuckStore.emitChange();
+        RankingStore.emitChange();
         break;
 
-      case WualuckConstants.WUALUCK_LOAD_SUCCESS:
+      case RankingConstants.RANKING_LOAD_SUCCESS:
         _ranking = action.data;
-        WualuckStore.emitChange();
+        RankingStore.emitChange();
         break;
     }
 
@@ -57,4 +60,4 @@ var WualuckStore = assign({}, EventEmitter.prototype, {
 
 });
 
-module.exports = WualuckStore
+module.exports = RankingStore

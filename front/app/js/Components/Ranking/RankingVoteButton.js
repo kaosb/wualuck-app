@@ -1,6 +1,6 @@
 /** @jsx React.DOM */
 var React = require('react');
-var WualuckActions = require('../../Actions/WualuckActions');
+var RankingActions = require('../../Actions/RankingActions');
 
 var RankingVoteButton = React.createClass({
   render: function() {
@@ -10,7 +10,7 @@ var RankingVoteButton = React.createClass({
   },
 
   _onVoteClick: function() {
-    WualuckActions.vote(this.props.id);
+    RankingActions.vote(this.props.id);
   }
 
 });

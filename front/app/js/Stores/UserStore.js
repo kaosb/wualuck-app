@@ -1,17 +1,26 @@
 var WualuckDispatcher = require('../Dispatchers/WualuckDispatcher');
 var EventEmitter = require('events').EventEmitter;
-var WualuckConstants = require('../Constants/WualuckConstants');
-var $ = require('jquery');
+var UserConstants = require('../Constants/UserConstants');
 var assign = require('object-assign');
+var _ = require('lodash');
 
-var CHANGE_EVENT = 'change';
+var CHANGE_EVENT = 'user_change';
 
-var _user = {"name": "Tomás Dintrans", "picture": "http://placehold.it/50x50"};
+var _user = {};//{name: "Alan Turing", picture: "http://placehold.it/50x50"};
+var _error_message = '';
 
 var UserStore = assign({}, EventEmitter.prototype, {
 
   getCurrentUser: function() {
     return _user;
+  },
+
+  getErrorMessage: function() {
+    return _error_message;
+  },
+
+  isLoggedIn: function() {
+    return ! _.isEmpty(_user);
   },
 
   emitChange: function() {
@@ -30,7 +39,21 @@ var UserStore = assign({}, EventEmitter.prototype, {
     var action = payload.action;
 
     switch(action.actionType) {
-      case WualuckConstants.WUALUCK_VOTE:
+      case UserConstants.INVALID_LOGIN:
+        _error_message = action.msg;
+        UserStore.emitChange();
+        break;
+
+      case UserConstants.LOGIN_SUCCESS:
+        _error_message = '';
+        _user = action.user;
+
+        UserStore.emitChange();
+        break;
+
+      case UserConstants.LOGGED_OUT:
+        _user = {};
+        UserStore.emitChange();
         break;
     }
 

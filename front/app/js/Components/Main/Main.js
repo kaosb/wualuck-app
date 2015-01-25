@@ -16,7 +16,12 @@ var Main = React.createClass({
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
           Desafia a una marca
-          <Link href="/desafia">Desafia</Link>
+          <Link href="/desafia" className="btn-desafiar">
+            <i className="ion-ios-arrow-right"></i>
+            <span>Desafia a tus marcas y obten lo que quieres</span>
+            <i className="ion-ios-arrow-left"></i>
+
+          </Link>
         </div>
     );
   }

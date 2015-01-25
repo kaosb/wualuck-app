@@ -1,20 +1,19 @@
 /** @jsx React.DOM */
 var React = require('react');
-var WualuckActions = require('../../Actions/WualuckActions');
-var WualuckStoreWatchMixin = require('../../Mixins/WualuckStoreWatchMixin');
-var WualuckStore = require('../../Stores/WualuckStore');
+var RankingStoreWatchMixin = require('../../Mixins/RankingStoreWatchMixin');
+var RankingStore = require('../../Stores/RankingStore');
 var RankingFilter = require('../Ranking/RankingFilter');
 var RankingList = require('../Ranking/RankingList');
 
 function getAppState () {
   return {
-    ranking: WualuckStore.getAll(),
-    filterText: WualuckStore.getFilterText()
+    ranking: RankingStore.getAll(),
+    filterText: RankingStore.getFilterText()
   }
 }
 
 var RankingBox = React.createClass({
-  mixins: [WualuckStoreWatchMixin(getAppState)],
+  mixins: [RankingStoreWatchMixin(getAppState)],
 
   render: function() {
     return (
