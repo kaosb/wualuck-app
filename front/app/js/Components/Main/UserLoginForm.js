@@ -22,12 +22,18 @@ var UserLoginForm = React.createClass({
 
   _onLogin: function(e) {
     e.preventDefault();
-    console.log('Logging in');
+
     var credentials = {
       email: this.refs.email.getDOMNode().value,
       password: this.refs.password.getDOMNode().value
     };
     UserActions.login(credentials);
+  },
+
+  _onLoginTwitter: function(e) {
+    e.preventDefault();
+
+    UserActions.socialLogin('twitter');
   },
 
   getInitialState: function() {
@@ -56,6 +62,8 @@ var UserLoginForm = React.createClass({
           <button className="close" onClick={this.closeModal} ><i className="ion-ios-close-empty"></i></button>
           <form onSubmit={this._onLogin} className="form">
             <p className={errorClass}>{this.state.error_message}</p>
+            <a href="http://localhost:1337/auth/twitter" target="_self">Ingresar con Twitter</a> <br/>
+            <a href="http://localhost:1337/auth/facebook" target="_self">Ingresar con Facebook</a>
             <label htmlFor="email">e-mail</label>
             <input type="text" id="email" ref="email" autoComplete="off" />
 

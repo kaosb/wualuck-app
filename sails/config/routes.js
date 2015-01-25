@@ -32,15 +32,12 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  },
+  '/': 'AuthController.redirect',
+
+  'get /test': 'RankingController.test',
 
   'post /ranking/vote/:ranking':  'RankingController.vote',
 
-  'post /user/login': 'UserController.login',
-
-  'get /user/session': 'UserController.session'
 
   /***************************************************************************
   *                                                                          *
@@ -52,4 +49,14 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  'get /auth/session': 'AuthController.session',
+  'get /login': 'AuthController.login',
+  'get /logout': 'AuthController.logout',
+  'get /register': 'AuthController.register',
+
+  'post /auth/local': 'AuthController.callback',
+  'post /auth/local/:action': 'AuthController.callback',
+
+  'get /auth/:provider': 'AuthController.provider',
+  'get /auth/:provider/callback': 'AuthController.callback',
 };

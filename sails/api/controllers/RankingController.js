@@ -6,6 +6,14 @@
  */
 
 module.exports = {
+
+  test :function(req, res) {
+    User.find().exec(function(err, users) {
+      res.json(users);
+    });
+
+  },
+
 	vote: function (req, res, next) {
     var id = req.param('ranking');
 

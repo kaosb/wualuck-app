@@ -6,7 +6,7 @@ var UserActions = {
   init: function() {
     $.ajax({
       type: 'GET',
-      url: 'http://localhost:1337/user/session',
+      url: 'http://localhost:1337/auth/session',
       xhrFields: {
         withCredentials: true
       }
@@ -55,10 +55,31 @@ var UserActions = {
       });
   },
 
+  socialLogin: function(plataform) {
+    switch(plataform) {
+      case 'twitter':
+        var authWindow = window.open('about:blank', '', 'left=20,top=20,width=400,height=300,toolbar=0,resizable=1');
+          /* do the AJAX call requesting for the authorize URL */
+
+          $.ajax({
+              url: 'http://localhost:1337/auth/twitter',
+              type: "GET"
+          })
+          .done(function (data) {
+              /* This is where the magic happens, we simply redirec the popup to the new authorize URL that we received from the server */
+              authWindow.location.replace(data.url);
+          })
+          .always(function () {
+              /* You can poll if the window got closed here, and so a refresh on the main page, or another AJAX call for example */
+          });
+        break;
+    }
+  },
+
   logout: function() {
     $.ajax({
       type: 'GET',
-      url: 'http://localhost:1337/user/logout',
+      url: 'http://localhost:1337/logout',
       xhrFields: {
         withCredentials: true
       }

@@ -31,8 +31,8 @@ var HeaderUser = React.createClass({
 
         {loggedIn ?
             [
-              <h5 key="1" className="UserName" onClick={this._onLogout}>{ this.state.user.name }</h5>,
-              <img src={ this.state.user.picture } alt={this.state.user.name} className="UserPicture" key="2" />
+              <h5 key="1" className="UserName" onClick={this._onLogout}>{ this.state.user.username }</h5>,
+              <img src={ this.state.user.picture } alt={this.state.user.username} className="UserPicture" key="2" />
             ]
           : <UserLoginForm />}
       </div>
