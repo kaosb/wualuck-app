@@ -1,4 +1,6 @@
 .form {
+  @include clearfix();
+
   input {
     background: $wualuck-gray;
     border: none;
@@ -27,11 +29,18 @@
     display: inline-block;
     cursor: pointer;
     float: right;
+    margin-left: 5px;
   }
+
+  .btn-info { background: $wualuck-red; }
 }
 
 .error {
   font-size: 12px;
   color: red;
   padding-bottom: 10px;
+}
+
+.form-padded {
+  padding: 10px;
 }

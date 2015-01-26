@@ -1,6 +1,6 @@
 /** @jsx React.DOM */
-var React = require('react');
-var UserStore = require('../Stores/UserStore');
+var React       = require('react');
+var UserStore   = require('../Stores/UserStore');
 var UserActions = require('../Actions/UserActions');
 
 var UserStoreWatchMixin = function(cb) {

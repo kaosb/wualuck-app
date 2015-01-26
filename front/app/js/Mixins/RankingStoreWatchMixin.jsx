@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
-var React = require('react');
+var React          = require('react');
 var RankingActions = require('../Actions/RankingActions');
-var RankingStore = require('../Stores/RankingStore');
+var RankingStore   = require('../Stores/RankingStore');
 
 var RankingStoreWatchMixin = function(cb) {
   return {

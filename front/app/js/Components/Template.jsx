@@ -1,7 +1,6 @@
 /** @jsx React.DOM */
-var Header = require('./Header/Header');
-var RankingBox = require('./Ranking/RankingBox');
-var React = require('react');
+var Header     = require('./Header/Header.jsx');
+var React      = require('react');
 
 var Template = React.createClass({
   render: function() {

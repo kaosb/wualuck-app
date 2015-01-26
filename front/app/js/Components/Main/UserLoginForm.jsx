@@ -1,10 +1,9 @@
 /** @jsx React.DOM */
-var React = require('react');
-var $ = require('jquery');
-var Modal = require('react-modal');
-var UserActions = require('../../Actions/UserActions');
-var UserStore = require('../../Stores/UserStore');
-var UserStoreWatchMixin = require('../../Mixins/UserStoreWatchMixin');
+var React               = require('react');
+var Modal               = require('react-modal');
+var UserActions         = require('../../Actions/UserActions');
+var UserStore           = require('../../Stores/UserStore');
+var UserStoreWatchMixin = require('../../Mixins/UserStoreWatchMixin.jsx');
 
 var appElement = document.getElementById('main');
 
@@ -14,7 +13,7 @@ Modal.injectCSS();
 function getUserState() {
   return {
     error_message: UserStore.getErrorMessage()
-  }
+  };
 }
 
 var UserLoginForm = React.createClass({

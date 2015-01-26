@@ -1,6 +1,7 @@
 var WualuckDispatcher = require('../Dispatchers/WualuckDispatcher');
-var UserConstants = require('../Constants/UserConstants');
-var $ = require('jquery');
+var UserConstants     = require('../Constants/UserConstants');
+var $                 = require('jquery');
+
 var UserActions = {
 
   init: function() {
@@ -36,7 +37,7 @@ var UserActions = {
     $.ajax({
       type: 'POST',
       data: credentials,
-      url: 'http://localhost:1337/user/login',
+      url: 'http://localhost:1337/auth/local',
       xhrFields: {
         withCredentials: true
       }
@@ -96,7 +97,39 @@ var UserActions = {
         msg: xhr.responseJSON.error
       });
     });
+  },
+
+  signUp: function(newUser) {
+    $.ajax({
+      type: 'POST',
+      data: newUser,
+      url: 'http://localhost:1337/auth/local/register',
+      xhrFields: {
+        withCredentials: true
+      }
+    })
+    .done(function(user) {
+      WualuckDispatcher.handleViewAction({
+        actionType: UserConstants.SIGNUP_SUCCESS,
+        user: user
+      });
+    }).fail(function(xhr, statusCode, err) {
+      console.log(xhr);
+      WualuckDispatcher.handleViewAction({
+        actionType: UserConstants.SIGNUP_ERROR,
+        msg: xhr.responseJSON
+      });
+    });
+
+  },
+
+  signUpStep: function(step) {
+    WualuckDispatcher.handleViewAction({
+      actionType: UserConstants.SIGNUP_STEP,
+      step: step
+    });
   }
-}
+
+};
 
 module.exports = UserActions;

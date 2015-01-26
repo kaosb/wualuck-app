@@ -1,22 +1,25 @@
-var gulp = require('gulp');
-var browserify = require('gulp-browserify');
-var concat = require('gulp-concat');
+var gulp         = require('gulp');
+var browserify   = require('gulp-browserify');
+var concat       = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
-var sass = require('gulp-sass');
-var reactify = require('reactify');
-var clean = require('gulp-clean');
-var importCss = require('gulp-import-css');
-var pkg = require('./package.json');
-var webserver = require('gulp-webserver');
+var sass         = require('gulp-sass');
+var reactify     = require('reactify');
+var clean        = require('gulp-clean');
+var importCss    = require('gulp-import-css');
+var pkg          = require('./package.json');
+var webserver    = require('gulp-webserver');
+var notify       = require('gulp-notify');
+var util         = require('gulp-util');
 
-gulp.task('browserify', function () {
+
+gulp.task('browserify', function() {
   return gulp.src(pkg.paths.app)
-    .pipe(browserify({transform: 'reactify'}))
+    .pipe(browserify({transform: 'reactify'})).on("error", notify.onError("<%= error.message %>"))
     .pipe(concat(pkg.dest.app))
     .pipe(gulp.dest(pkg.dest.dist));
 });
 
-gulp.task('copy', function () {
+gulp.task('copy', function() {
   gulp.src('bower_components/ionicons/fonts/**/*.*')
     .pipe(gulp.dest('dist/fonts'));
 
@@ -38,7 +41,7 @@ gulp.task('webserver', function() {
 
 gulp.task('css', function() {
   return gulp.src(pkg.paths.sass)
-    .pipe(sass())
+    .pipe(sass()).on("error", notify.onError("<%= error.message %>"))
     .pipe(importCss())
     .pipe(concat(pkg.dest.css))
     .pipe(autoprefixer({
@@ -55,6 +58,6 @@ gulp.task('clean', function() {
 
 gulp.task('default', ['browserify', 'css', 'copy']);
 
-gulp.task('watch', ['default', 'webserver'], function () {
+gulp.task('watch', ['default', 'webserver'], function() {
   gulp.watch([pkg.paths.js, pkg.paths.sass, pkg.paths.index], ['default']);
 });

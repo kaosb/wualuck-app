@@ -1,6 +1,6 @@
 /** @jsx React.DOM */
-var React = require('react');
-var RankingListItem = require('./RankingListItem');
+var React           = require('react');
+var RankingListItem = require('./RankingListItem.jsx');
 
 var RankingBox = React.createClass({
   render: function() {

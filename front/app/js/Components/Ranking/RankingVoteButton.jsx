@@ -1,5 +1,5 @@
 /** @jsx React.DOM */
-var React = require('react');
+var React          = require('react');
 var RankingActions = require('../../Actions/RankingActions');
 
 var RankingVoteButton = React.createClass({

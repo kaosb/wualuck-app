@@ -1,6 +1,6 @@
 /** @jsx React.DOM */
-var React = require('react');
-var RankingVoteButton = require('./RankingVoteButton');
+var React             = require('react');
+var RankingVoteButton = require('./RankingVoteButton.jsx');
 
 var RankingListItem = React.createClass({
   render: function() {

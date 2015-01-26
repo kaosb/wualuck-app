@@ -1,13 +1,14 @@
-var React = require('react');
-var Link = require('react-router-component').Link;
-var UserRegistrationForm = require('./UserRegistrationForm');
-var UserStoreWatchMixin = require('../../Mixins/UserStoreWatchMixin');
-var UserStore = require('../../Stores/UserStore');
+/** @jsx React.DOM */
+var React                 = require('react');
+var UserStore             = require('../../Stores/UserStore');
+var Link                  = require('react-router-component').Link;
+var UserStoreWatchMixin   = require('../../Mixins/UserStoreWatchMixin.jsx');
+var UserRegistrationModal = require('./UserRegistrationModal.jsx');
 
 function getUserState () {
   return {
     isLoggedIn: UserStore.isLoggedIn()
-  }
+  };
 }
 
 var Main = React.createClass({
@@ -22,11 +23,11 @@ var Main = React.createClass({
                   <i className="ion-ios-arrow-left"></i>
                 </Link>
           :
-                <UserRegistrationForm className="btn-desafiar">
+                <UserRegistrationModal className="btn-desafiar">
                   <i className="ion-ios-arrow-right"></i>
                   <span>Desafia a tus marcas y obten lo que quieres</span>
                   <i className="ion-ios-arrow-left"></i>
-                </UserRegistrationForm>
+                </UserRegistrationModal>
           ;
 
     return (

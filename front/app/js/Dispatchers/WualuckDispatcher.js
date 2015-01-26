@@ -1,5 +1,5 @@
 var Dispatcher = require('./Dispatcher');
-var assign = require('object-assign');
+var assign     = require('object-assign');
 
 var WualuckDispatcher = assign({}, Dispatcher.prototype, {
 

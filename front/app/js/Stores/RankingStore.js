@@ -1,8 +1,8 @@
 var WualuckDispatcher = require('../Dispatchers/WualuckDispatcher');
-var EventEmitter = require('events').EventEmitter;
-var RankingConstants = require('../Constants/RankingConstants');
-var assign = require('object-assign');
-var _ = require('lodash');
+var EventEmitter      = require('events').EventEmitter;
+var RankingConstants  = require('../Constants/RankingConstants');
+var assign            = require('object-assign');
+var _                 = require('lodash');
 
 var CHANGE_EVENT = 'ranking_change';
 

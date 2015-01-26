@@ -15,7 +15,7 @@ gulp
 Compila a la carpeta *dist* en la cual se puede ejecutar con algun servidor http:
 
 ```bash
-cd dist
 npm install -g live-server
+cd dist
 live-server
 ```

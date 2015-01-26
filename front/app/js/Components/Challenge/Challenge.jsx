@@ -1,6 +1,6 @@
 /** @jsx React.DOM */
-var RankingBox = require('../Ranking/RankingBox');
-var React = require('react');
+var React      = require('react');
+var RankingBox = require('../Ranking/RankingBox.jsx');
 
 var Challenge = React.createClass({
   render: function() {

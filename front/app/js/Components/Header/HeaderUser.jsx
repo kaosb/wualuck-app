@@ -1,16 +1,16 @@
 /** @jsx React.DOM */
-var UserStore = require('../../Stores/UserStore');
-var Search = require('./Search');
-var UserLoginForm = require('../Main/UserLoginForm');
-var UserStoreWatchMixin = require('../../Mixins/UserStoreWatchMixin');
-var UserActions = require('../../Actions/UserActions');
-var React = require('react');
+var React               = require('react');
+var UserStore           = require('../../Stores/UserStore');
+var UserStoreWatchMixin = require('../../Mixins/UserStoreWatchMixin.jsx');
+var UserActions         = require('../../Actions/UserActions');
+var UserLoginForm       = require('../Main/UserLoginForm.jsx');
+var Search              = require('./Search.jsx');
 
 function getAppState() {
   return {
     user: UserStore.getCurrentUser(),
     loggedIn: UserStore.isLoggedIn()
-  }
+  };
 }
 
 var HeaderUser = React.createClass({

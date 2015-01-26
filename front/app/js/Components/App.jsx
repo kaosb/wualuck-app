@@ -1,12 +1,12 @@
 /** @jsx React.DOM */
-var Router = require('react-router-component');
-var React = require('react');
-var Main = require('./Main/Main');
-var Challenge = require('./Challenge/Challenge');
-var Template = require('./Template');
-var Locations = Router.Locations;
-var Location = Router.Location;
+var React       = require('react');
+var Router      = require('react-router-component');
 var UserActions = require('../Actions/UserActions');
+var Main        = require('./Main/Main.jsx');
+var Challenge   = require('./Challenge/Challenge.jsx');
+var Template    = require('./Template.jsx');
+var Locations   = Router.Locations;
+var Location    = Router.Location;
 
 var App = React.createClass({
 

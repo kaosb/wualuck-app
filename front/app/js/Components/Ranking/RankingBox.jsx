@@ -1,15 +1,15 @@
 /** @jsx React.DOM */
-var React = require('react');
-var RankingStoreWatchMixin = require('../../Mixins/RankingStoreWatchMixin');
-var RankingStore = require('../../Stores/RankingStore');
-var RankingFilter = require('../Ranking/RankingFilter');
-var RankingList = require('../Ranking/RankingList');
+var React                  = require('react');
+var RankingStore           = require('../../Stores/RankingStore');
+var RankingStoreWatchMixin = require('../../Mixins/RankingStoreWatchMixin.jsx');
+var RankingFilter          = require('../Ranking/RankingFilter.jsx');
+var RankingList            = require('../Ranking/RankingList.jsx');
 
 function getAppState () {
   return {
     ranking: RankingStore.getAll(),
     filterText: RankingStore.getFilterText()
-  }
+  };
 }
 
 var RankingBox = React.createClass({

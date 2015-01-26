@@ -140,19 +140,19 @@ var AuthController = {
    * @param {Object} res
    */
   callback: function (req, res) {
-    function tryAgain (err) {
+    function tryAgain (user) {
 
       // Only certain error messages are returned via req.flash('error', someError)
       // because we shouldn't expose internal authorization errors to the user.
       // We do return a generic error and the original request body.
       var flashError = req.flash('error')[0];
 
-      if (err && !flashError ) {
-        req.flash('error', 'Error.Passport.Generic');
-      } else if (flashError) {
-        req.flash('error', flashError);
-      }
-      req.flash('form', req.body);
+      // if (err && !flashError ) {
+      //   req.flash('error', 'Error.Passport.Generic');
+      // } else if (flashError) {
+      //   req.flash('error', flashError);
+      // }
+      // req.flash('form', req.body);
 
       // If an error was thrown, redirect the user to the
       // login, register or disconnect action initiator view.
@@ -161,19 +161,23 @@ var AuthController = {
 
       switch (action) {
         case 'register':
-          res.redirect('/register');
-          break;
+          if (flashError) {
+            return res.json(res.i18n(flashError), 406);
+          }
+          return res.json(user);
+
         case 'disconnect':
           res.redirect('back');
           break;
+
         default:
-          res.redirect('/login');
+          res.json({error: "Nombre de usuario o contraseña incorrectos"}, 403);
       }
     }
 
     passport.callback(req, res, function (err, user) {
       if (err) {
-        return tryAgain();
+        return tryAgain(user);
       }
 
       req.login(user, function (err) {
@@ -183,7 +187,7 @@ var AuthController = {
 
         // Upon successful login, send the user to the homepage were req.user
         // will available.
-        res.redirect('/');
+        res.json(user);
       });
     });
   },

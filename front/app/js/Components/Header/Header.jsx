@@ -1,8 +1,8 @@
 /** @jsx React.DOM */
-var Search = require('./Search');
-var HeaderUser = require('./HeaderUser');
-var Link = require('react-router-component').Link;
-var React = require('react');
+var React      = require('react');
+var Search     = require('./Search.jsx');
+var HeaderUser = require('./HeaderUser.jsx');
+var Link       = require('react-router-component').Link;
 
 var Header = React.createClass({
   render: function() {
@@ -11,7 +11,7 @@ var Header = React.createClass({
         <Search />
         <Link href="/">
           <img src="img/wualuck-logo-header.png" alt="Wualuck" className="logo" />
-        </Link>
+          </Link>
         <HeaderUser />
       </div>
     );

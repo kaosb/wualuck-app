@@ -1,6 +1,6 @@
 var WualuckDispatcher = require('../Dispatchers/WualuckDispatcher');
-var RankingConstants = require('../Constants/RankingConstants');
-var $ = require('jquery');
+var RankingConstants  = require('../Constants/RankingConstants');
+var $                 = require('jquery');
 
 var RankingActions = {
 
