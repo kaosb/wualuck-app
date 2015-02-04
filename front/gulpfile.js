@@ -14,13 +14,19 @@ var util         = require('gulp-util');
 
 gulp.task('browserify', function() {
   return gulp.src(pkg.paths.app)
-    .pipe(browserify({transform: 'reactify'})).on("error", notify.onError("<%= error.message %>"))
+    .pipe(browserify({
+        transform: 'reactify',
+        extensions: ['.jsx']
+      })).on("error", notify.onError("<%= error.message %>"))
     .pipe(concat(pkg.dest.app))
     .pipe(gulp.dest(pkg.dest.dist));
 });
 
 gulp.task('copy', function() {
   gulp.src('bower_components/ionicons/fonts/**/*.*')
+    .pipe(gulp.dest('dist/fonts'));
+
+  gulp.src('bower_components/slick-carousel/slick/fonts/**/*.*')
     .pipe(gulp.dest('dist/fonts'));
 
   gulp.src('img/**/*.*')

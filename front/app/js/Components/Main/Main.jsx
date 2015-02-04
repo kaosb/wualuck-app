@@ -4,6 +4,7 @@ var UserStore             = require('../../Stores/UserStore');
 var Link                  = require('react-router-component').Link;
 var UserStoreWatchMixin   = require('../../Mixins/UserStoreWatchMixin.jsx');
 var UserRegistrationModal = require('./UserRegistrationModal.jsx');
+var CompanyCarousel       = require('./CompanyCarousel.jsx');
 
 function getUserState () {
   return {
@@ -17,11 +18,7 @@ var Main = React.createClass({
 
   render: function() {
     var link = this.state.isLoggedIn ?
-                <Link href="/desafia" className="btn-desafiar">
-                  <i className="ion-ios-arrow-right"></i>
-                  <span>Desafia a tus marcas y obten lo que quieres</span>
-                  <i className="ion-ios-arrow-left"></i>
-                </Link>
+                <CompanyCarousel/>
           :
                 <UserRegistrationModal className="btn-desafiar">
                   <i className="ion-ios-arrow-right"></i>
