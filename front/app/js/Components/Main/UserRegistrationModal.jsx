@@ -5,7 +5,7 @@ var UserActions          = require('../../Actions/UserActions');
 var UserStore            = require('../../Stores/UserStore');
 var UserStoreWatchMixin  = require('../../Mixins/UserStoreWatchMixin.jsx');
 var UserRegistrationForm = require('./UserRegistrationForm.jsx');
-var Link                 = require('react-router-component').Link;
+var Link                 = require('react-router').Link;
 
 var appElement = document.getElementById('main');
 Modal.setAppElement(appElement);

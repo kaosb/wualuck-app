@@ -1,13 +1,18 @@
 /** @jsx React.DOM */
 var React      = require('react');
 var RankingBox = require('../Ranking/RankingBox.jsx');
+var Router     = require('react-router');
 
 var Challenge = React.createClass({
+
+  mixins: [Router.State],
+
   render: function() {
     return (
       <div className="Challenge">
         <RankingBox />
         <div className="main">
+          <h2>Desafiar a {this.getParams().marcaSlug}</h2>
           <form>
             <label htmlFor="dream">¿Cuál es tu sueño?</label>
             <textarea type="text" id="dream" ref="dream"></textarea>
