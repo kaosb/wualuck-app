@@ -13,7 +13,7 @@ var NotFound     = require('./Components/Main/NotFound.jsx');
 var routes = (
   <Route handler={App} path="/">
     <DefaultRoute handler={Main} />
-    <Route name="challenge" path="/desafiar/:marcaSlug" handler={Challenge} />
+    <Route name="challenge" path="/desafia/:marcaSlug" handler={Challenge} />
     <NotFoundRoute handler={NotFound}/>
   </Route>
 );

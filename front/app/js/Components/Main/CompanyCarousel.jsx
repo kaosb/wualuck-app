@@ -1,7 +1,8 @@
 /** @jsx React.DOM */
-var React      = require('react');
-var Modal = require('react-modal');
+var React  = require('react');
+var Modal  = require('react-modal');
 var Slider = require('react-slick');
+var Link   = require('react-router').Link;
 
 var CompanyCarousel = React.createClass({
 
@@ -21,11 +22,12 @@ var CompanyCarousel = React.createClass({
 
   render: function() {
     var settings = {
-      dots: false,
+      dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 3,
-      slidesToScroll: 3
+      slidesToScroll: 3,
+      prevArrow: "<button>Hola</button>"
     };
     return (
       <div>
@@ -41,13 +43,13 @@ var CompanyCarousel = React.createClass({
           onRequestClose={this.closeModal}
         >
           <Slider {...settings}>
-                  <div><h3 className="special">1</h3></div>
-                  <div><h3 className="special">1</h3></div>
-                  <div><h3 className="special">1</h3></div>
-                  <div><h3 className="special">1</h3></div>
-                  <div><h3 className="special">1</h3></div>
-                  <div><h3 className="special">1</h3></div>
-                </Slider>
+            <div><Link to={"/desafia/"+1}><h3 className="special">1</h3></Link></div>
+            <div><Link to={"/desafia/"+2}><h3 className="special">2</h3></Link></div>
+            <div><Link to={"/desafia/"+3}><h3 className="special">3</h3></Link></div>
+            <div><Link to={"/desafia/"+4}><h3 className="special">4</h3></Link></div>
+            <div><Link to={"/desafia/"+5}><h3 className="special">5</h3></Link></div>
+            <div><Link to={"/desafia/"+6}><h3 className="special">6</h3></Link></div>
+          </Slider>
         </Modal>
       </div>
     );

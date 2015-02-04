@@ -27,7 +27,7 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('dist/fonts'));
 
   gulp.src('bower_components/slick-carousel/slick/fonts/**/*.*')
-    .pipe(gulp.dest('dist/fonts'));
+    .pipe(gulp.dest('dist/css/fonts'));
 
   gulp.src('img/**/*.*')
     .pipe(gulp.dest('dist/img'));
