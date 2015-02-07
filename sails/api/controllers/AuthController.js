@@ -164,7 +164,8 @@ var AuthController = {
           if (flashError) {
             return res.json(res.i18n(flashError), 406);
           }
-          return res.json(user);
+          res.json(user);
+          break;
 
         case 'disconnect':
           res.redirect('back');
@@ -175,9 +176,9 @@ var AuthController = {
       }
     }
 
-    passport.callback(req, res, function (err, user) {
-      if (err) {
-        return tryAgain(user);
+    passport.callback(req, res, function (err, user, challenges, statuses) {
+      if (err || !user) {
+        return tryAgain(challenges);
       }
 
       req.login(user, function (err) {
@@ -185,9 +186,15 @@ var AuthController = {
           return tryAgain();
         }
 
+        req.session.authenticated = true;
+
         // Upon successful login, send the user to the homepage were req.user
         // will available.
-        res.json(user);
+        if (!req.params['provider']){
+          res.json(user);
+        }else{
+          res.redirect('/');
+        }
       });
     });
   },

@@ -23,7 +23,7 @@ var UserLoginForm = React.createClass({
     e.preventDefault();
 
     var credentials = {
-      email: this.refs.email.getDOMNode().value,
+      identifier: this.refs.email.getDOMNode().value,
       password: this.refs.password.getDOMNode().value
     };
     UserActions.login(credentials);
