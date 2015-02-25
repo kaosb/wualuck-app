@@ -1,0 +1,241 @@
+//
+// Glyphicons for Bootstrap
+//
+// Since icons are fonts, they can be placed anywhere text is placed and are
+// thus automatically sized to match the surrounding child. To use, create an
+// inline element with the appropriate classes, like so:
+//
+// <a href="#"><span class="glyphicon glyphicon-star"></span> Star</a>
+
+// Import the fonts
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('@{icon-font-path}@{icon-font-name}.eot');
+  src: url('@{icon-font-path}@{icon-font-name}.eot?#iefix') format('embedded-opentype'),
+       url('@{icon-font-path}@{icon-font-name}.woff') format('woff'),
+       url('@{icon-font-path}@{icon-font-name}.ttf') format('truetype'),
+       url('@{icon-font-path}@{icon-font-name}.svg#glyphicons-halflingsregular') format('svg');
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype'),
+     url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAABMcAAsAAAAAEtAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABCAAAAGAAAABgDq/zOGNtYXAAAAFoAAAAPAAAADzL/xqdZ2FzcAAAAaQAAAAIAAAACAAAABBnbHlmAAABrAAADvwAAA78KAScXWhlYWQAABCoAAAANgAAADYAXhe1aGhlYQAAEOAAAAAkAAAAJAfCBP9obXR4AAARBAAAAEQAAABEN3gAbWxvY2EAABFIAAAAJAAAACQeKCKMbWF4cAAAEWwAAAAgAAAAIAAdAMVuYW1lAAARjAAAAW8AAAFvfAQ4PnBvc3QAABL8AAAAIAAAACAAAwAAAAMEAAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAg5g4DwP/A/8ADwABAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAMAAAAUAAMAAQAAABQABAAoAAAABgAEAAEAAgAg5g7//wAAACDmAP///+EaAgABAAAAAAAAAAEAAf//AA8AAQAAAAAAAAAAAAIAADc5AQAAAAAEAEUAPgP9A1IANABFAFYAbQAAAT4CNDU0LgIHJg4CDwEuAycOAxUUHgIXDgMVFB4CNwU+AzU0LgInAx4DFy4DJwc+AzcFNh4CFwcmDgIHPgMXAQUuAzU0PgIXJR4DFRQOAicD4gECARYqPCUdR0I2DHsLNkNHHCU8KhcBAQIBBgkHAytJYjgBnDhiSSsEBgoHnRElHxYCEiwyNh1cCyw0NBP9thMzNC0LWh04MiwTAxUfJRIB9P5kLVA7IyM7UC0BnC1QOyMjO1AtAd8GCw0MCDByX0EBASA1TSsBLUo4HgEBP2FwMgYPDA4FDxwgHhI7a04vAQEBLVBpPRAiHiANAUEBK0ZXLRYgGQwBASM3KhYBAQEYKDkhAQEOGCMVK1pGLQH9UwEBJUJXMjFYQScBAQElQ1YzMFlAJwEAAwAAAGUDbgOrAAQAFgA6AAATESMRMzcWBwYrASInJjU0NzYzMhcWFQERIxE0JyYjIgcGBwYVESM2NTQvATMVIzY3Njc2NzYzMhcWFce8vAwBHR4wAS8cHR0eLzAcHQKbvBcYMSQYGAwHvAIBAbwBDAwMFBQeHSRiOzwCm/3KAjavKhwcHBwqKhwbGxwq/l/+vAEuPCIiExQdER3+xOSNjhscUhIODRAQCQlBQX0AAAALAA8AAANeBAAACgASABsAMABDAGIAbQCOAJoArQDCAAABFRQHJic1NjcWFRcVBzU0NxYVJTc1JxU3ETcRExcRBxUGJwYnJj0BJxUUFxYXNjcVNzU0JyYnBgc1JxE3NRYXNjc2NTc1JxQHBicGPQE3NTQnJgcmBwYdARQXFjcWNzY3NjUBNTQnBh0BFBc2NQEUBwYHBgcGJwYnJicmJyY1NDc2NzY3NjcWFxYXFhcWFQE3BxUHNSYnJicfARcVFAcGJwYnJj0BNDc2FzYXFhU3ESc1BgcmJyY9ARcVFDEWNxY3NTcCKxYODAwOFsEzGRr92D2yPDmlMjISDwoCATIEBxocH/UFCh8dGDMzGhsfCgXBNAEEExpmEBYmJxYQEBcnKRUKAgH+pBgZGRgBmw8IGRkhadTUaSEaGQgPDwgZGiFp1NRpIRoZBw/9xjpFOQgbFRA9KPoQFScmFhAQFiYnFRDANB4dGggENAIKEBE0ATl5JgEBDK0LAQElARoBHCUBASV7ATUBNwH+ugEBRP68AQEbAdcZAQENARPPAeAbDxQBASIeVHEpEB8BAR57Af6EARoeAQEeESkGBwEeBRYBASkwATouFR4BAR4VLmIuFB4BAR8PEAQdAgl5JgEBJnknAQEn/lSHQSMWGAINAQENAhgWIz+JhUMhFxYFCwEBCwUWFyFBhwLYAeWaAZwpUDoxAZUpYzAUHgEBHhUvYy4VHgEBHhUuXf7iAR8jAQEUDxziAdAUDgEBGtgBAAQAAABJA7cDbgAYADEAVwCKAAABFAcGBwYjIicmJyY1NDc2NzYzMhcWFxYVIRQHBgcGIyInJicmNTQ3Njc2MzIXFhcWFTM0JyYjIgcGIyInJiMiBwYVFBcWFxYXFhcWOwEyNzY3Njc2NzY1NxQHBgcGBwYHBgcGIyInJicmJyYnJicmJyY1NDcmNTQ3MhcWFzYzMhc2NzYzFhUUBxYVAW4HCBERGBgSEQcICAcREhgYEREIBwFtBwcREhgYERIHBwcHEhEYGBIRBwdcKCdDGFgoMjEoVxlDKCcSExwcKSomJy5gLycmKikcHBMSgCMWJicqKjc3Kys0LSUkMDAnJycnHh8TI04QHT4vLz1UXVRMPC4vPR4QTgFJFxgYExQUExgYFxcYGBMUFBMYGBcXGBgTFBQTGBgXFxgYExQUExgYF0UwMAwHBwwwMEUyJiUVFg0NBAQEBA0NFhUlJjJld0YsICASEQoKAgMCAgUFDAwSER0cJkZ3h1svMkI7FxYwFBMvFhc7QjIuW4gAAAEAAABJA24DtwBnAAABFAcGBwYjIic2NzY3FhcWMzI3Njc2NTQnJicmIyIHBgcGBwYHBhUUFxYXFjc2NzY3NicmNTQ3NjMyFxYVFAcGIyInJjc2NzY3NjU0JyYjIgcGFRQXBwYXJicmNTQ3Njc2MzIXFhcWFQNuOztlZXdAPSILBRoLHh8jRTY2Hh4iIkFAUjw0NCQkGhoMDRcXLBEFAQMEAQMJHjw8YFcwMCcnPSMVFQgECwoHBxAPHSMZGA45CQJ2SEk7O2VkeHdlZTs7AgB3ZWU7OxI2KBRlFxAQJydFRFZBOTkkJBARGxwjJCYnJjstLhIHEwQNDgMOCyMzVz4+Ly9LYUREGRkiFCIhGhkSHBMTICExKRzvKD00bG2Fd2VlOzs7O2VldwAAAAEAAABJAbcD9wAaAAABMwcjESMRIzUzNTQ3NjsBFSMiBwYHBgcGHQEBJJMRgsNhYTExcYJRFw0OBgYBAgLCov4pAdeiYmg1NqIEBAoJCgoTUQAAAAEAGQCSA54DbgA7AAABBgcWBxYHBgcGBwYHBiMiJxYzMjcmJyYnFjMyNyYnJic3FhcmJyY3JjcWFxYXJjcmNzYzMhc2NwYHNjcDniY3AgEBFxUtKz49V1VjmoIVGIFkOzEuExQPGhc/KykBASYtJxUXAQEaRGRicwYBATc1Tk83PjgXOzU2Axc4KAgQSkpKREQ0NCAfUwJPASQjOAMGDTMyQwMWAhkpKDAyK1UzMwYWFE02NjsMIUIkBhcAAgAAAJICkgO3AAsAKwAAEyEnNicmIyIHBgcXBRMGBwYjISInJicTJjc2OwE3Jjc2MzIXFhcHMzIXFhe3ASUBASsqPjssKgEBAdoBAQ8RFv3bFhEPAQEBEQ8YEQEBTUpqaE1KAQETFhEPAQJJbjwrKysrPG43/rcXEBAQEBcBSRcQEG5pS0xMS2luEBAXAAAAAwAAAJIDbgNuABQAKQA+AAABFRQHBiMhIicmPQE0NzYzITIXFhURFRQHBiMhIicmPQE0NzYzITIXFhURFRQHBiMhIicmPQE0NzYzITIXFhUDbgsLD/zcDwsLCwsPAyQPCwsLCw/83A8LCwsLDwMkDwsLCwsP/NwPCwsLCw8DJA8LCwEASQ8LCwsLD0kPCwsLCw8BJUoOCwsLCw5KDgsLCwsOASRJDwsLCwsPSQ8LCwsLDwAAAgAAAEkEAANuACAATQAAAREUBwYHJQYnJjURFhcWFxYXFhcWFzcWNzY3Njc2NzY3NRQHBgcGBwYHBgcGBwYHBgcnBicmJyYnJicmJyYnJicmJyY1NDc2NwU2FxYVBAAbGyX8tiUbGxkhz00gFRQiIR0CHSEiFBUgYbwgGRwcKtc0BhITDA0RERAPDQINDxAREQ0MExIGNGJhFCMgHxgXLANKJRsbAmr+OiUcGgEBARwaJwHEGxaMOhcODA8NAQEBDw0ODBlGgBUcpywqKB6UJgMODQkHDAkGBAEBAQYECwoJBw8MBSREQw8XKyklKx8dAQEBHBonAAADAAAASQQAA24AIABQAGUAACURBgcGBwYHBgcGJwcmJyYnJicmJyYnERQXFjcFNjc2NRE9AiYHIicmByInJQYHBhUUFxYXFhcWFxYXFhcWNxc2NzY3Njc2NzY3Njc2NzY1NxEUBwYHJQYnJjURNDc2FyUWFxYVA7cSFplaHRITHx8bAhsfHxMSHVqZFhIGBQcDSgcFBgEBAgECAwQE/LYHBQZUbncEEBEKCRAQDQ0LAgsNDRAQCQoREAR3bh8aG0kbGyX8tiUbGxsbJQNKJRsbpQG3FRB3ShoNDg0PAQEBDQ8MDxhMdRIT/ksJBAcBAQEFBgcCWQ0BBwgBBQYCAgEBBQYHYUFYXQQNDwYJCQwEBgEBAQQGCgsHCA0PAl9WGigqIRb9kiUcGgEBARwaJwJsJxocAQEBGhwlAAAAAQAAAEkEAAO3ACoAACUiJwEmJyYnJicmJyY1NDc2MzIXFhcWFxYXNjc2NzY3NjMyFxYVFAcBBiMCAA8K/psFCgoWFhERDg1JSIAkJCUgIBcWFRUWFyAgJSQkgEhJg/6cCg9JCgFYBQoLGxscHSkoJn5HRwwNFRQTEhUVEhMUFQ0MR0d+foP+qQoAAAADAAAASQNuA7cAEQAqAEMAAAEUBwUGIyInJjURNDc2FwUWFTM0JyYnJiMiBwYHBhUUFxYXFjMyNzY3NjUzFAcGBwYjIicmJyY1NDc2NzYzMhcWFxYVAqUT/skICgkJEhITEQE3E0kqKkdIVFVHSCkqKilIR1VUSEcqKoA7O2Vld3hkZTs7OztlZHh3ZWU7OwIAFQq3BQQLFQFuFQsKC7cKFVVHRyoqKipHR1VVR0cqKioqR0dVd2VlOzs7O2Vld3dlZTs7OztlZXcAAAACAAAASQNuA7cAEACDAAABNCcmIyIHBhUUFxYzMjc2NSUVFAcGDwEGBxYXFhUUBwYHBiMiLwEGBwYHBisBIicmNScmJwcGIyInJicmNTQ3Njc2NyYvASYnJj0BNDc2PwE2NyYnJjU0NzY3NjMyHwE2NzY3NjsBMhcWHwEWFzc2MzIXFhcWFRQHBgcGBxYfARYXFhUCSSsrPD0rKiorPTwrKwElBQQHagsLFCkGBg8pKQ0HCE8ZGwkHBBF/CAYGEBwYUAYICAdIFgQFCBUUCxAIaAgEBQUEBmsIDhcmBgUPKikNBwdPGRsJCAQQfwgGBgEQHBdRBggIBkoVBAUIFRUKDwloCAQFAgA9KisrKj09KisrKj0+fwYHBgEQHxUdMgcHCAUWKCkFPg0JTR0QBQUHaQoMPgUHQR8FCAcGDBoaDh0cDwEGBgh/BgcGARAaGyAvBgcGBxUpKQY9DQlNHRAFBQdpCgw+BQZEHQUIBwYMGhoOHRsQAQYGCAAAAAIAAP/ABAADwAAoAD0AAAEiDgIVFB4CFwEVFB4COwE1MzUzNTM3HgMzMj4CNTQuAiMTIi4CNTQ+AjMyHgIVFA4CIwLAQnVXMgEBAgH+ewoRGA1AgICAUw0aHBwOQnVXMjJXdUJgFCMaDw8aIxQUIxoPDxojFAPAMld1QggODw4I/nvADRgRCkCAgFMFBwUCMld1QkJ1VzL+wA8aIxQUIxoPDxojFBQjGg8AAAABAAAAAQAAhQVlcl8PPPUACwQAAAAAAM6faXwAAAAAzp9pfAAA/8AEAAQAAAAACAACAAAAAAAAAAEAAAPA/8AAAAUtAAAAAAQAAAEAAAAAAAAAAAAAAAAAAAARAAAAAAIAAAAFLQBFA24AAANuAA8DtwAAA24AAAG3AAADtwAZApIAAANuAAAEAAAABAAAAAQAAAADbgAAA24AAAQAAAAAAAAAAAoAqAEAAh4C5AN6A6QEAgRKBKQFIAW+BgQGagcoB34AAQAAABEAwwALAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA4ArgABAAAAAAABABoAAAABAAAAAAACAA4AcQABAAAAAAADABoAMAABAAAAAAAEABoAfwABAAAAAAAFABYAGgABAAAAAAAGAA0ASgABAAAAAAAKACgAmQADAAEECQABABoAAAADAAEECQACAA4AcQADAAEECQADABoAMAADAAEECQAEABoAfwADAAEECQAFABYAGgADAAEECQAGABoAVwADAAEECQAKACgAmQB3AHUAYQBsAGEAYwBrAC0AaQBjAG8AbgBzAFYAZQByAHMAaQBvAG4AIAAwAC4AMAB3AHUAYQBsAGEAYwBrAC0AaQBjAG8AbgBzd3VhbGFjay1pY29ucwB3AHUAYQBsAGEAYwBrAC0AaQBjAG8AbgBzAFIAZQBnAHUAbABhAHIAdwB1AGEAbABhAGMAawAtAGkAYwBvAG4AcwBHAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4AAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Catchall baseclass
+//.glyphicon {
+[class*="glyphicon-"] {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Individual icons
+.glyphicon-asterisk               { &:before { content: "\2a"; } }
+.glyphicon-plus                   { &:before { content: "\2b"; } }
+.glyphicon-euro                   { &:before { content: "\20ac"; } }
+.glyphicon-minus                  { &:before { content: "\2212"; } }
+.glyphicon-cloud                  { &:before { content: "\2601"; } }
+.glyphicon-envelope               { &:before { content: "\2709"; } }
+.glyphicon-pencil                 { &:before { content: "\270f"; } }
+.glyphicon-glass                  { &:before { content: "\e001"; } }
+.glyphicon-music                  { &:before { content: "\e002"; } }
+.glyphicon-search                 { &:before { content: "\e003"; } }
+.glyphicon-heart                  { &:before { content: "\e005"; } }
+.glyphicon-star                   { &:before { content: "\e006"; } }
+.glyphicon-star-empty             { &:before { content: "\e007"; } }
+.glyphicon-user                   { &:before { content: "\e008"; } }
+.glyphicon-film                   { &:before { content: "\e009"; } }
+.glyphicon-th-large               { &:before { content: "\e010"; } }
+.glyphicon-th                     { &:before { content: "\e011"; } }
+.glyphicon-th-list                { &:before { content: "\e012"; } }
+.glyphicon-ok                     { &:before { content: "\e013"; } }
+.glyphicon-remove                 { &:before { content: "\e014"; } }
+.glyphicon-zoom-in                { &:before { content: "\e015"; } }
+.glyphicon-zoom-out               { &:before { content: "\e016"; } }
+.glyphicon-off                    { &:before { content: "\e017"; } }
+.glyphicon-signal                 { &:before { content: "\e018"; } }
+.glyphicon-cog                    { &:before { content: "\e019"; } }
+.glyphicon-trash                  { &:before { content: "\e020"; } }
+.glyphicon-home                   { &:before { content: "\e021"; } }
+.glyphicon-file                   { &:before { content: "\e022"; } }
+.glyphicon-time                   { &:before { content: "\e023"; } }
+.glyphicon-road                   { &:before { content: "\e024"; } }
+.glyphicon-download-alt           { &:before { content: "\e025"; } }
+.glyphicon-download               { &:before { content: "\e026"; } }
+.glyphicon-upload                 { &:before { content: "\e027"; } }
+.glyphicon-inbox                  { &:before { content: "\e028"; } }
+.glyphicon-play-circle            { &:before { content: "\e029"; } }
+.glyphicon-repeat                 { &:before { content: "\e030"; } }
+.glyphicon-refresh                { &:before { content: "\e031"; } }
+.glyphicon-list-alt               { &:before { content: "\e032"; } }
+.glyphicon-flag                   { &:before { content: "\e034"; } }
+.glyphicon-headphones             { &:before { content: "\e035"; } }
+.glyphicon-volume-off             { &:before { content: "\e036"; } }
+.glyphicon-volume-down            { &:before { content: "\e037"; } }
+.glyphicon-volume-up              { &:before { content: "\e038"; } }
+.glyphicon-qrcode                 { &:before { content: "\e039"; } }
+.glyphicon-barcode                { &:before { content: "\e040"; } }
+.glyphicon-tag                    { &:before { content: "\e041"; } }
+.glyphicon-tags                   { &:before { content: "\e042"; } }
+.glyphicon-book                   { &:before { content: "\e043"; } }
+.glyphicon-print                  { &:before { content: "\e045"; } }
+.glyphicon-font                   { &:before { content: "\e047"; } }
+.glyphicon-bold                   { &:before { content: "\e048"; } }
+.glyphicon-italic                 { &:before { content: "\e049"; } }
+.glyphicon-text-height            { &:before { content: "\e050"; } }
+.glyphicon-text-width             { &:before { content: "\e051"; } }
+.glyphicon-align-left             { &:before { content: "\e052"; } }
+.glyphicon-align-center           { &:before { content: "\e053"; } }
+.glyphicon-align-right            { &:before { content: "\e054"; } }
+.glyphicon-align-justify          { &:before { content: "\e055"; } }
+.glyphicon-list                   { &:before { content: "\e056"; } }
+.glyphicon-indent-left            { &:before { content: "\e057"; } }
+.glyphicon-indent-right           { &:before { content: "\e058"; } }
+.glyphicon-facetime-video         { &:before { content: "\e059"; } }
+.glyphicon-picture                { &:before { content: "\e060"; } }
+.glyphicon-map-marker             { &:before { content: "\e062"; } }
+.glyphicon-adjust                 { &:before { content: "\e063"; } }
+.glyphicon-tint                   { &:before { content: "\e064"; } }
+.glyphicon-edit                   { &:before { content: "\e065"; } }
+.glyphicon-share                  { &:before { content: "\e066"; } }
+.glyphicon-check                  { &:before { content: "\e067"; } }
+.glyphicon-move                   { &:before { content: "\e068"; } }
+.glyphicon-step-backward          { &:before { content: "\e069"; } }
+.glyphicon-fast-backward          { &:before { content: "\e070"; } }
+.glyphicon-backward               { &:before { content: "\e071"; } }
+.glyphicon-play                   { &:before { content: "\e072"; } }
+.glyphicon-pause                  { &:before { content: "\e073"; } }
+.glyphicon-stop                   { &:before { content: "\e074"; } }
+.glyphicon-forward                { &:before { content: "\e075"; } }
+.glyphicon-fast-forward           { &:before { content: "\e076"; } }
+.glyphicon-step-forward           { &:before { content: "\e077"; } }
+.glyphicon-eject                  { &:before { content: "\e078"; } }
+.glyphicon-chevron-left           { &:before { content: "\e079"; } }
+.glyphicon-chevron-right          { &:before { content: "\e080"; } }
+.glyphicon-plus-sign              { &:before { content: "\e081"; } }
+.glyphicon-minus-sign             { &:before { content: "\e082"; } }
+.glyphicon-remove-sign            { &:before { content: "\e083"; } }
+.glyphicon-ok-sign                { &:before { content: "\e084"; } }
+.glyphicon-question-sign          { &:before { content: "\e085"; } }
+.glyphicon-info-sign              { &:before { content: "\e086"; } }
+.glyphicon-screenshot             { &:before { content: "\e087"; } }
+.glyphicon-remove-circle          { &:before { content: "\e088"; } }
+.glyphicon-ok-circle              { &:before { content: "\e089"; } }
+.glyphicon-ban-circle             { &:before { content: "\e090"; } }
+.glyphicon-arrow-left             { &:before { content: "\e091"; } }
+.glyphicon-arrow-right            { &:before { content: "\e092"; } }
+.glyphicon-arrow-up               { &:before { content: "\e093"; } }
+.glyphicon-arrow-down             { &:before { content: "\e094"; } }
+.glyphicon-share-alt              { &:before { content: "\e095"; } }
+.glyphicon-resize-full            { &:before { content: "\e096"; } }
+.glyphicon-resize-small           { &:before { content: "\e097"; } }
+.glyphicon-exclamation-sign       { &:before { content: "\e101"; } }
+.glyphicon-gift                   { &:before { content: "\e102"; } }
+.glyphicon-leaf                   { &:before { content: "\e103"; } }
+.glyphicon-eye-open               { &:before { content: "\e105"; } }
+.glyphicon-eye-close              { &:before { content: "\e106"; } }
+.glyphicon-warning-sign           { &:before { content: "\e107"; } }
+.glyphicon-plane                  { &:before { content: "\e108"; } }
+.glyphicon-random                 { &:before { content: "\e110"; } }
+.glyphicon-comment                { &:before { content: "\e111"; } }
+.glyphicon-magnet                 { &:before { content: "\e112"; } }
+.glyphicon-chevron-up             { &:before { content: "\e113"; } }
+.glyphicon-chevron-down           { &:before { content: "\e114"; } }
+.glyphicon-retweet                { &:before { content: "\e115"; } }
+.glyphicon-shopping-cart          { &:before { content: "\e116"; } }
+.glyphicon-folder-close           { &:before { content: "\e117"; } }
+.glyphicon-folder-open            { &:before { content: "\e118"; } }
+.glyphicon-resize-vertical        { &:before { content: "\e119"; } }
+.glyphicon-resize-horizontal      { &:before { content: "\e120"; } }
+.glyphicon-hdd                    { &:before { content: "\e121"; } }
+.glyphicon-bullhorn               { &:before { content: "\e122"; } }
+.glyphicon-certificate            { &:before { content: "\e124"; } }
+.glyphicon-thumbs-up              { &:before { content: "\e125"; } }
+.glyphicon-thumbs-down            { &:before { content: "\e126"; } }
+.glyphicon-hand-right             { &:before { content: "\e127"; } }
+.glyphicon-hand-left              { &:before { content: "\e128"; } }
+.glyphicon-hand-up                { &:before { content: "\e129"; } }
+.glyphicon-hand-down              { &:before { content: "\e130"; } }
+.glyphicon-circle-arrow-right     { &:before { content: "\e131"; } }
+.glyphicon-circle-arrow-left      { &:before { content: "\e132"; } }
+.glyphicon-circle-arrow-up        { &:before { content: "\e133"; } }
+.glyphicon-circle-arrow-down      { &:before { content: "\e134"; } }
+.glyphicon-globe                  { &:before { content: "\e135"; } }
+.glyphicon-tasks                  { &:before { content: "\e137"; } }
+.glyphicon-filter                 { &:before { content: "\e138"; } }
+.glyphicon-fullscreen             { &:before { content: "\e140"; } }
+.glyphicon-dashboard              { &:before { content: "\e141"; } }
+.glyphicon-heart-empty            { &:before { content: "\e143"; } }
+.glyphicon-link                   { &:before { content: "\e144"; } }
+.glyphicon-phone                  { &:before { content: "\e145"; } }
+.glyphicon-usd                    { &:before { content: "\e148"; } }
+.glyphicon-gbp                    { &:before { content: "\e149"; } }
+.glyphicon-sort                   { &:before { content: "\e150"; } }
+.glyphicon-sort-by-alphabet       { &:before { content: "\e151"; } }
+.glyphicon-sort-by-alphabet-alt   { &:before { content: "\e152"; } }
+.glyphicon-sort-by-order          { &:before { content: "\e153"; } }
+.glyphicon-sort-by-order-alt      { &:before { content: "\e154"; } }
+.glyphicon-sort-by-attributes     { &:before { content: "\e155"; } }
+.glyphicon-sort-by-attributes-alt { &:before { content: "\e156"; } }
+.glyphicon-unchecked              { &:before { content: "\e157"; } }
+.glyphicon-expand                 { &:before { content: "\e158"; } }
+.glyphicon-collapse-down          { &:before { content: "\e159"; } }
+.glyphicon-collapse-up            { &:before { content: "\e160"; } }
+.glyphicon-log-in                 { &:before { content: "\e161"; } }
+.glyphicon-flash                  { &:before { content: "\e162"; } }
+.glyphicon-log-out                { &:before { content: "\e163"; } }
+.glyphicon-new-window             { &:before { content: "\e164"; } }
+.glyphicon-record                 { &:before { content: "\e165"; } }
+.glyphicon-save                   { &:before { content: "\e166"; } }
+.glyphicon-open                   { &:before { content: "\e167"; } }
+.glyphicon-saved                  { &:before { content: "\e168"; } }
+.glyphicon-import                 { &:before { content: "\e169"; } }
+.glyphicon-export                 { &:before { content: "\e170"; } }
+.glyphicon-send                   { &:before { content: "\e171"; } }
+.glyphicon-floppy-disk            { &:before { content: "\e172"; } }
+.glyphicon-floppy-saved           { &:before { content: "\e173"; } }
+.glyphicon-floppy-remove          { &:before { content: "\e174"; } }
+.glyphicon-floppy-save            { &:before { content: "\e175"; } }
+.glyphicon-floppy-open            { &:before { content: "\e176"; } }
+.glyphicon-credit-card            { &:before { content: "\e177"; } }
+.glyphicon-transfer               { &:before { content: "\e178"; } }
+.glyphicon-cutlery                { &:before { content: "\e179"; } }
+.glyphicon-header                 { &:before { content: "\e180"; } }
+.glyphicon-compressed             { &:before { content: "\e181"; } }
+.glyphicon-earphone               { &:before { content: "\e182"; } }
+.glyphicon-phone-alt              { &:before { content: "\e183"; } }
+.glyphicon-tower                  { &:before { content: "\e184"; } }
+.glyphicon-stats                  { &:before { content: "\e185"; } }
+.glyphicon-sd-video               { &:before { content: "\e186"; } }
+.glyphicon-hd-video               { &:before { content: "\e187"; } }
+.glyphicon-subtitles              { &:before { content: "\e188"; } }
+.glyphicon-sound-stereo           { &:before { content: "\e189"; } }
+.glyphicon-sound-dolby            { &:before { content: "\e190"; } }
+.glyphicon-sound-5-1              { &:before { content: "\e191"; } }
+.glyphicon-sound-6-1              { &:before { content: "\e192"; } }
+.glyphicon-sound-7-1              { &:before { content: "\e193"; } }
+.glyphicon-copyright-mark         { &:before { content: "\e194"; } }
+.glyphicon-registration-mark      { &:before { content: "\e195"; } }
+.glyphicon-cloud-download         { &:before { content: "\e197"; } }
+.glyphicon-cloud-upload           { &:before { content: "\e198"; } }
+.glyphicon-tree-conifer           { &:before { content: "\e199"; } }
+.glyphicon-tree-deciduous         { &:before { content: "\e200"; } }
+.glyphicon-briefcase              { &:before { content: "\1f4bc"; } }
+.glyphicon-calendar               { &:before { content: "\1f4c5"; } }
+.glyphicon-pushpin                { &:before { content: "\1f4cc"; } }
+.glyphicon-paperclip              { &:before { content: "\1f4ce"; } }
+.glyphicon-camera                 { &:before { content: "\1f4f7"; } }
+.glyphicon-lock                   { &:before { content: "\1f512"; } }
+.glyphicon-bell                   { &:before { content: "\1f514"; } }
+.glyphicon-bookmark               { &:before { content: "\1f516"; } }
+.glyphicon-fire                   { &:before { content: "\1f525"; } }
+.glyphicon-wrench                 { &:before { content: "\1f527"; } }

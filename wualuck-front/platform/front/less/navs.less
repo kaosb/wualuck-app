@@ -1,0 +1,531 @@
+//
+// Navs
+// --------------------------------------------------
+
+
+// Base class
+// --------------------------------------------------
+
+.nav {
+  margin-bottom: 0;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  .clearfix();
+
+  > li {
+    position: relative;
+    display: block;
+
+    > a {
+      position: relative;
+      display: block;
+      padding: @nav-link-padding;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        //background-color: @nav-link-hover-bg;
+      }
+    }
+
+    // Disabled state sets text to gray and nukes hover/tab effects
+    &.disabled > a {
+      color: @nav-disabled-link-color;
+
+      &:hover,
+      &:focus {
+        color: @nav-disabled-link-hover-color;
+        text-decoration: none;
+        background-color: transparent;
+        cursor: not-allowed;
+      }
+    }
+  }
+  &.social-links {
+    margin: 20px 0 0 0;
+    > li {
+      > a {
+         margin-bottom: 20px;
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          background-color: none;
+        }
+        .icon {
+          margin-right: 5px;
+        }
+      }
+    }
+    &.half-links {
+      > li {
+        > a {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  // Open dropdowns
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      background-color: @nav-link-hover-bg;
+      border-color: @link-color;
+    }
+  }
+
+  // Dividers (basically an hr) within the dropdown
+  .nav-divider {
+    .nav-divider();
+  }
+
+  // Prevent IE8 from misplacing imgs
+  // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
+  > li > a > img {
+    max-width: none;
+  }
+}
+.nav-links {
+   > li {
+    float: left;
+    display: inline-block;
+    &:first-child {
+      > a {
+        &:before {
+          content: "";
+        }
+      }
+    }
+
+    // Links rendered as pills
+    > a {
+      //border-radius: 5px;
+      padding: 0;
+      &:hover {
+        background-color: transparent;
+      }
+      &:before {
+        content: "-";
+        position: absolute;
+        left: 5%;
+      }
+
+    }
+    + li {
+      margin-left: 2px;
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        //color: @nav-pills-active-link-hover-color;
+        //background-color: green;
+      }
+    }
+  }
+}
+
+.nav-product {
+  position: relative;
+  float: right;
+   > li {
+    float: left;
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 2px;
+    &:first-child {
+      > a {
+        
+      }
+    }
+
+    // Links rendered as pills
+    > a {
+      //border-radius: 5px;
+      padding: 5px 10px;
+      color: @text-color;
+      &.title-categories {
+        //width: 100%;
+        display: block;
+        &.title-pink {
+          background-color: lighten(#DA4453, 20%);
+          &:hover {
+            background-color: #DA4453;
+          }
+        }
+        &.title-purple {
+          background-color: lighten(#967ADC, 20%);
+          &:hover {
+            background-color: #967ADC;
+          }
+        }
+        &.title-green {
+          background-color: @brand-primary;
+        }
+        &.title-orange {
+           background-color: lighten(#E9573F, 20%);
+          &:hover {
+            background-color: #E9573F;
+          }
+        }
+        &.title-yellow {
+          background-color: lighten(#F6BB42, 20%);
+          &:hover {
+            background-color: #F6BB42;
+          }
+        }
+      }
+      &:hover {
+        //background-color: transparent;
+        color: @text-color;
+      }
+
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        //color: @nav-pills-active-link-hover-color;
+        //background-color: green;
+      }
+      &.title-categories {
+        &.title-pink {
+          background-color: #DA4453;
+        }
+        &.title-purple {
+          background-color: #967ADC;
+        }
+        &.title-green {
+          background-color: @brand-primary;
+        }
+        &.title-orange {
+          background-color: #E9573F;
+        }
+        &.title-yellow {
+         background-color: #F6BB42;
+        }
+      }
+    }
+  }
+}
+
+// Tabs
+// -------------------------
+
+// Give the tabs something to sit on
+.nav-tabs {
+  border-bottom: 1px solid @nav-tabs-border-color;
+  > li {
+    float: left;
+    // Make the list-items overlay the bottom border
+    margin-bottom: -1px;
+
+    // Actual tabs (as links)
+    > a {
+      margin-right: 2px;
+      line-height: @line-height-base;
+      border: 1px solid transparent;
+      border-radius: @border-radius-base @border-radius-base 0 0;
+      &:hover {
+        border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
+      }
+    }
+
+    // Active state, and it's :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @nav-tabs-active-link-hover-color;
+        background-color: @nav-tabs-active-link-hover-bg;
+        border: 1px solid @nav-tabs-active-link-hover-border-color;
+        border-bottom-color: transparent;
+        cursor: default;
+      }
+    }
+  }
+  // pulling this in mainly for less shorthand
+  &.nav-justified {
+    .nav-justified();
+    .nav-tabs-justified();
+  }
+}
+
+.nav-tabs-user {
+  border-bottom: 1px solid @text-color;
+  > li {
+    float: left;
+    clear: both;
+    width: 100%;
+    // Make the list-items overlay the bottom border
+    //margin-bottom: -1px;
+
+    // Actual tabs (as links)
+    &.feat-user {
+      a {
+        font-size: @font-size-base + 2;
+        .number-wualuck {
+          background-color: @text-color;
+          .border-radius(20px);
+          color: @brand-primary;
+          padding: 0 5px;
+        }
+      }
+    }
+    &.feat-wualuck {
+      a {
+        font-size: @font-size-base + 2;
+        background-color: #FFF15F;
+        color: @brand-primary;
+        &:hover {
+          background-color: darken(#FFF15F, 10%);
+        }
+      }
+    }
+    &.deactivate-filter {
+      a {
+        background-color: #A8A8AA;
+        &:hover {
+          background-color: darken(#A8A8AA, 10%);
+        }
+      }
+    }
+    > a {
+      //margin-right: 2px;
+      color: @text-color;
+      background-color: @brand-primary;
+      line-height: @line-height-base;
+      border-bottom: 1px solid @text-color;
+      padding: 5px 8px;
+      width: 100%;
+      font-size: @font-size-base - 2;
+      //border-radius: @border-radius-base @border-radius-base 0 0;
+      &:hover {
+        background-color: darken(@brand-primary, 10%);
+        //border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
+      }
+    }
+
+    // Active state, and it's :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @nav-tabs-active-link-hover-color;
+        background-color: @nav-tabs-active-link-hover-bg;
+        border: 1px solid @nav-tabs-active-link-hover-border-color;
+        border-bottom-color: transparent;
+        cursor: default;
+      }
+    }
+  }
+  &.white-tabs {
+    border-bottom: 1px solid @brand-primary;
+    > li {
+      &.feat-user {
+        a {
+          font-size: @font-size-base + 2;
+          .number-wualuck {
+            background-color: @text-color;
+            .border-radius(20px);
+            color: @brand-primary;
+            padding: 0 5px;
+          }
+        }
+      }
+      &.feat-wualuck {
+        a {
+          font-size: @font-size-base + 2;
+          background-color: #FFF15F;
+          color: @brand-primary;
+          &:hover {
+            background-color: darken(#FFF15F, 10%);
+          }
+        }
+      }
+      &.red {
+        a {
+          background-color: #F52837;
+          color: @text-color;
+          &:hover {
+            background-color: darken(#F52837, 10%);
+          }
+        }
+      }
+      &.green-dark {
+        a {
+          background-color: #00783F;
+          color: @text-color;
+          &:hover {
+            background-color: darken(#00783F, 10%);
+          }
+        }
+      }
+      &.sky-blue {
+        a {
+          background-color: #66CBFF;
+          color: @text-color;
+          &:hover {
+            background-color: darken(#66CBFF, 10%);
+          }
+        }
+      }
+      > a {
+        //margin-right: 2px;
+        color: @brand-primary;
+        background-color: @text-color;
+        border-bottom: 1px solid @brand-primary;
+        &:hover {
+          background-color: darken(@text-color, 10%);
+          //border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
+        }
+      }
+    }
+  }
+}
+
+
+// Pills
+// -------------------------
+.nav-pills {
+  > li {
+    float: left;
+
+    // Links rendered as pills
+    > a {
+      border-radius: 5px;
+    }
+    + li {
+      margin-left: 2px;
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @nav-pills-active-link-hover-color;
+        background-color: @nav-pills-active-link-hover-bg;
+      }
+    }
+  }
+}
+
+
+// Stacked pills
+.nav-stacked {
+  > li {
+    float: none;
+    + li {
+      margin-top: 2px;
+      margin-left: 0; // no need for this gap between nav items
+    }
+  }
+}
+
+
+// Nav variations
+// --------------------------------------------------
+
+// Justified nav links
+// -------------------------
+
+.nav-justified {
+  width: 100%;
+
+  > li {
+    float: none;
+     > a {
+      text-align: center;
+    }
+  }
+
+  @media (min-width: @screen-sm) {
+    > li {
+      display: table-cell;
+      width: 1%;
+    }
+  }
+}
+
+// Move borders to anchors instead of bottom of list
+.nav-tabs-justified {
+  border-bottom: 0;
+  > li > a {
+    border-bottom: 1px solid @nav-tabs-justified-link-border-color;
+
+    // Override margin from .nav-tabs
+    margin-right: 0;
+  }
+  > .active > a {
+    border-bottom-color: @nav-tabs-justified-active-link-border-color;
+  }
+}
+
+// Move borders to anchors instead of bottom of list
+.nav-responsive-top {
+  border-bottom: 0;
+  > li > a {
+    border-bottom: 1px solid #fff;
+    //border-bottom: 1px solid @nav-tabs-justified-link-border-color;
+    //color: @brand-primary;
+    &:hover {
+      color: @brand-primary;
+      background-color: #fff;
+    }
+
+    // Override margin from .nav-tabs
+    margin-right: 0;
+  }
+  > .active > a {
+    //border-bottom-color: @nav-tabs-justified-active-link-border-color;
+  }
+}
+
+
+// Tabbable tabs
+// -------------------------
+
+// Clear any floats
+.tabbable {
+  .clearfix();
+}
+
+// Show/hide tabbable areas
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: none;
+}
+.tab-content,
+.pill-content {
+  > .active {
+    display: block;
+  }
+}
+
+
+
+// Dropdowns
+// -------------------------
+
+// Make dropdown carets use link color in navs
+.nav .caret {
+  border-top-color: @link-color;
+  border-bottom-color: @link-color;
+}
+.nav a:hover .caret {
+  border-top-color: @link-hover-color;
+  border-bottom-color: @link-hover-color;
+}
+
+// Specific dropdowns
+.nav-tabs .dropdown-menu {
+  // make dropdown border overlap tab border
+  margin-top: -1px;
+  // Remove the top rounded corners here since there is a hard edge above the menu
+  .border-top-radius(0);
+}

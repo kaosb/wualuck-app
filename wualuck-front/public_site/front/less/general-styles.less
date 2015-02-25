@@ -1,0 +1,195 @@
+//
+// -------------------------------------------------- PUBLIC SITE */
+// -------------------------------------------------- BRANDING */
+.branding-box {
+  height: 485px;
+  margin: 15% auto;
+ //position: fixed;
+}
+.sidebar-feature {
+}
+.branding {
+  display: block;
+  width: 300px;
+  margin: 0 auto 30px auto;
+  &:hover {
+    text-decoration: none;
+    color: @text-color;
+  }
+}
+
+.logowualuck{
+    position: relative;
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 0px auto;
+    left: 15px;
+}
+.top-mobile {
+  display: none;
+}
+
+/* --------------------- */
+
+.item-images {
+  border: 2px solid @text-color;
+  background-color: @text-color;
+}
+
+.item-img img {
+  width: 100%;
+  border: 2px solid @text-color;
+}
+
+.bloque{
+    position: absolute;
+    top: 10%;
+}
+
+.container-fluid {
+  width: 100%;
+  height: 100%;
+}
+
+#footer {
+  background-color: @brand-primary;
+  position: fixed;
+  bottom: 0;
+  width: 365px;
+  z-index: 10;
+  padding-bottom: 10px;
+  left: 15px;
+}
+.next-page {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.message-big {
+  padding: 10% 20px;
+}
+
+.form-index {
+  position: relative;
+  z-index: 1;
+  &:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e008";
+    color: @brand-primary;
+    position: absolute;
+    z-index: 2;
+    top: 5px;
+    left: 10px;
+  }
+  .form-control {
+    padding-left: 30px;
+  }
+}
+
+/* -------------------------------------- Fixed content */
+
+#sidebar-fixed { 
+  left: 0;
+  width: 400px;
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#content-wrapper { 
+  float: left;
+  width: 100%;
+}
+#content-fixed {
+  margin-left: 400px;
+  overflow-y: auto;
+  .col-md-12, .col-md-6, .col-xs-12, .col-lg-4, .col-lg-6 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .row {
+      margin-right: 0;
+      margin-left: 0;
+  }
+  .col-md-4, .col-md-8 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+@media all and ( min-width : 720px ) and ( max-width : 960px ) {
+  .branding-box {
+    padding: 0 40px;
+    width: 400px;
+    display: block;
+  }
+}
+
+@media only screen and ( max-width : 719px ) {
+  .nav-mobile {
+   // position: absolute;
+    padding: 0 10px;
+    top: 0;
+   // font-size: 23px;
+  }
+  #menu-responsive{
+    width: 100%;
+    //position: absolute;
+    z-index: 10;
+  }
+  .branding {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  .logowualuck{
+      position: relative;
+      width: 250px;
+      height: auto;
+      display: block;
+      margin: 0px auto;
+      left: 5px;
+  }
+  .branding-box {
+    padding: 0 20px;
+    width: 100%;
+    display: block;
+  }
+  #sidebar-fixed {
+    left: 0;
+    margin-left: 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+   // height: 555px;
+  }
+  #content-fixed {
+    margin-left: 0;
+    overflow: visible;
+    display: block;
+    .col-md-12, .col-md-6, .col-xs-12, .col-lg-4 {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .col-md-4, .col-md-8 {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  #footer {
+    position: relative;
+    width: 250px;
+  }
+  .bigger-xl { font-size: 55px; }
+}
+
+
+

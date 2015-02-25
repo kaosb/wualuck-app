@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="ico/favicon.png">
+    <title>Wualuck - Poder social para tu felicidad.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet" />
+    -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,300italic,300,100italic,100,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" media="all" href="./../../platform/front/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" ></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js" ></script>
+    <!-- Scripts -->
+    <script type="text/javascript" src="./js/plugins/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="./js/plugins/tooltip.js"></script>
+    <script type="text/javascript" src="./js/plugins/dropdown.js"></script>
+    <script type="text/javascript" src="./../../platform/front/js/script.js"></script>
+  </head>
+  <body>
+
+    <!-- Fixed navbar -->
+    <div role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="navbar-brand"><i class="icon icon-wualuck"></i> Wualuck theme</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#grid">Grillas</a></li>
+            <li><a href="#elementos">Elementos</a></li>
+            <li><a href="cuadros.html">Cuadros</a></li>
+            <!--
+            <li class="dropdown">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          -->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="container" id="home">
+      <div class="jumbotron">
+        <h1>Framework Wualuck</h1>
+        <p>Este es el framework de Wualuck inspirado en Bootstrap. Elementos, grilla y demases.</p>
+        <!--
+        <p><a role="button" class="btn btn-primary btn-lg" href="#">Learn more »</a></p>
+      -->
+      </div>
+    </div>
+
+    <div class="container" id="grid">
+
+      <div class="page-header">
+        <h1>Ejemplos de cuadrícula Bootstrap</h1>
+        <p class="lead">Esquema básico de la red para conseguir que familiarizarse con la construcción del sistema de grilla Bootstrap.</p>
+      </div>
+
+      <h3>Tres columnas iguales</h3>
+      <p>Obtener tres columnas de igual ancho <strong> a partir de las computadoras de escritorio y escalar a grandes equipos de escritorio </strong>. En los dispositivos móviles, tablets y abajo, las columnas se apilan automáticamente.</p>
+      <div class="row">
+        <div class="col-md-4 auxi-column-grid">.col-md-4</div>
+        <div class="col-md-4 auxi-column-grid">.col-md-4</div>
+        <div class="col-md-4 auxi-column-grid">.col-md-4</div>
+      </div>
+
+      <h3>Tres columnas desiguales</h3>
+      <p>Obtener tres columnas <strong> a partir de las computadoras de escritorio y escalar a grandes equipos de escritorio </strong> de varios anchos. Recuerde, las columnas de la cuadrícula deben agregar hasta doce para un solo bloque horizontal. Más que eso, y columnas empiezan apilamiento sin importar el área de visualización.</p>
+      <div class="row">
+        <div class="col-md-3 auxi-column-grid">.col-md-3</div>
+        <div class="col-md-6 auxi-column-grid">.col-md-6</div>
+        <div class="col-md-3 auxi-column-grid">.col-md-3</div>
+      </div>
+
+      <h3>Dos columnas</h3>
+      <p>Obtener dos columnas <strong> a partir de las computadoras de escritorio y escalar a grandes equipos de escritorio </strong>.</p>
+      <div class="row">
+        <div class="col-md-8 auxi-column-grid">.col-md-8</div>
+        <div class="col-md-4 auxi-column-grid">.col-md-4</div>
+      </div>
+
+      <h3>Ancho total, una sola columna</h3>
+      <p class="text-warning">Las grillas no son necesarias para que los elementos tengan ancho completo.</p>
+
+      <hr>
+
+      <h3>Dos columnas con dos columnas anidadas</h3>
+      <p>Por la documentación, anidación es fácil sólo hay que poner una fila de columnas en una fila existente. Esto le da dos columnas <strong> a partir de equipos de sobremesa y escalada a las grandes computadoras de escritorio </strong>, con otros dos (anchos iguales) dentro de la columna más grande.</p>
+      <p>En tamaños de los dispositivos móviles, tablets y hacia abajo, estas columnas y sus columnas anidados se acumularán.</p>
+      <div class="row">
+        <div class="col-md-8 auxi-column-grid">
+          .col-md-8
+          <div class="row">
+            <div class="col-md-6 auxi-column-grid">.col-md-6</div>
+            <div class="col-md-6 auxi-column-grid">.col-md-6</div>
+          </div>
+        </div>
+        <div class="col-md-4 auxi-column-grid">.col-md-4</div>
+      </div>
+
+      <hr>
+
+      <h3>Mixto: móvil y de escritorio</h3>
+      <p>El sistema de red Bootstrap 3 tiene cuatro niveles de clases: xs (teléfonos), SM (comprimidos), MD (equipos de escritorio), y LG (de escritorio más grandes). Usted puede utilizar casi cualquier combinación de estas clases para crear diseños más dinámicos y flexibles.</p>
+      <p>Cada nivel de las clases de escalas de arriba, es decir, si usted planea en la fijación de los mismos anchos para xs y sm, sólo es necesario especificar xs.</p>
+      <div class="row">
+        <div class="col-xs-12 col-md-8 auxi-column-grid">.col-xs-12 .col-md-8</div>
+        <div class="col-xs-6 col-md-4 auxi-column-grid">.col-xs-6 .col-md-4</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-md-4 auxi-column-grid">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4 auxi-column-grid">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4 auxi-column-grid">.col-xs-6 .col-md-4</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 auxi-column-grid">.col-xs-6</div>
+        <div class="col-xs-6 auxi-column-grid">.col-xs-6</div>
+      </div>
+
+      <hr>
+
+      <h3>Mixto: móvil, tablet y de escritorio</h3>
+      <p></p>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-8 auxi-column-grid">.col-xs-12 .col-sm-6 .col-lg-8</div>
+        <div class="col-xs-6 col-lg-4 auxi-column-grid">.col-xs-6 .col-lg-4</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-sm-4 auxi-column-grid">.col-xs-6 .col-sm-4</div>
+        <div class="col-xs-6 col-sm-4 auxi-column-grid">.col-xs-6 .col-sm-4</div>
+        <div class="col-xs-6 col-sm-4 auxi-column-grid">.col-xs-6 .col-sm-4</div>
+      </div>
+
+      <hr>
+
+      <h3>Compensación Columna</h3>
+      <p>Claro flota en los puntos de interrupción específicos para evitar el ajuste de torpe con contenido desigual.</p>
+      <div class="row">
+        <div class="col-xs-6 col-sm-3 auxi-column-grid">.col-xs-6 .col-sm-3</div>
+        <div class="col-xs-6 col-sm-3 auxi-column-grid">.col-xs-6 .col-sm-3</div>
+
+        <!-- Add the extra clearfix for only the required viewport -->
+        <div class="clearfix visible-xs"></div>
+
+        <div class="col-xs-6 col-sm-3 auxi-column-grid">.col-xs-6 .col-sm-3</div>
+        <div class="col-xs-6 col-sm-3 auxi-column-grid">.col-xs-6 .col-sm-3</div>
+      </div>
+
+      <hr>
+
+      <h3>Offset, empujar, y tirar restablece</h3>
+      <p>Restablecer las compensaciones, empuja y tira a los puntos de interrupción específicos.</p>
+      <div class="row">
+        <div class="col-sm-5 col-md-6 auxi-column-grid">.col-sm-5 .col-md-6</div>
+        <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0 auxi-column-grid">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-5 col-lg-6 auxi-column-grid">.col-sm-6 .col-md-5 .col-lg-6</div>
+        <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0 auxi-column-grid">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
+      </div>
+
+
+    </div>
+
+    <hr>
+
+    <div class="container theme-showcase" id="elementos">
+
+      <div class="page-header">
+        <h1>Elementos</h1>
+      </div>
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a role="button" class="btn btn-primary btn-lg" href="#">Learn more »</a></p>
+      </div>
+
+
+
+      <div class="page-header">
+        <h1>Botones</h1>
+      </div>
+      <p>
+        <button class="btn btn-lg btn-default" type="button">Default</button>
+        <button class="btn btn-lg btn-primary" type="button">Primary</button>
+        <button class="btn btn-lg btn-success" type="button">Success</button>
+        <button class="btn btn-lg btn-info" type="button">Info</button>
+        <button class="btn btn-lg btn-warning" type="button">Warning</button>
+        <button class="btn btn-lg btn-danger" type="button">Danger</button>
+        <button class="btn btn-lg btn-link" type="button">Link</button>
+      </p>
+      <p>
+        <button class="btn btn-default" type="button">Default</button>
+        <button class="btn btn-primary" type="button">Primary</button>
+        <button class="btn btn-success" type="button">Success</button>
+        <button class="btn btn-info" type="button">Info</button>
+        <button class="btn btn-warning" type="button">Warning</button>
+        <button class="btn btn-danger" type="button">Danger</button>
+        <button class="btn btn-link" type="button">Link</button>
+      </p>
+      <p>
+        <button class="btn btn-sm btn-default" type="button">Default</button>
+        <button class="btn btn-sm btn-primary" type="button">Primary</button>
+        <button class="btn btn-sm btn-success" type="button">Success</button>
+        <button class="btn btn-sm btn-info" type="button">Info</button>
+        <button class="btn btn-sm btn-warning" type="button">Warning</button>
+        <button class="btn btn-sm btn-danger" type="button">Danger</button>
+        <button class="btn btn-sm btn-link" type="button">Link</button>
+      </p>
+      <p>
+        <button class="btn btn-xs btn-default" type="button">Default</button>
+        <button class="btn btn-xs btn-primary" type="button">Primary</button>
+        <button class="btn btn-xs btn-success" type="button">Success</button>
+        <button class="btn btn-xs btn-info" type="button">Info</button>
+        <button class="btn btn-xs btn-warning" type="button">Warning</button>
+        <button class="btn btn-xs btn-danger" type="button">Danger</button>
+        <button class="btn btn-xs btn-link" type="button">Link</button>
+      </p>
+
+
+      <div class="page-header">
+        <h1>Botones de Colores para Categorías en Cuadros</h1>
+      </div>
+      <p>sin padding ni margen para cuadros (square) porque funcionan con porcentajes</p>
+      <p>
+        <button class="btn btn-lg btn-color pink" type="button">Pink</button>
+        <button class="btn btn-lg btn-color purple" type="button">Purple</button>
+        <button class="btn btn-lg btn-color orange" type="button">Orange</button>
+        <button class="btn btn-lg btn-color yellow" type="button">Yellow</button>
+        <button class="btn btn-lg btn-color gray" type="button">Gray</button>
+        <button class="btn btn-lg btn-color red" type="button">Red</button>
+        <button class="btn btn-lg btn-color green" type="button">Green</button>
+      </p>
+
+      <p>con padding para cuadros (square)</p>
+      <p>
+        <button class="btn btn-lg btn-color pink btn-padding" type="button">Pink</button>
+        <button class="btn btn-lg btn-color purple btn-padding" type="button">Purple</button>
+        <button class="btn btn-lg btn-color orange btn-padding" type="button">Orange</button>
+        <button class="btn btn-lg btn-color yellow btn-padding" type="button">Yellow</button>
+        <button class="btn btn-lg btn-color gray btn-padding" type="button">Gray</button>
+        <button class="btn btn-lg btn-color red btn-padding" type="button">Red</button>
+        <button class="btn btn-lg btn-color green btn-padding" type="button">Green</button>
+      </p>
+
+      <p>con padding y margen para cuadros (square)</p>
+      <p>
+        <button class="btn btn-lg btn-color pink btn-padding btn-margin" type="button">Pink</button>
+        <button class="btn btn-lg btn-color purple btn-padding btn-margin" type="button">Purple</button>
+        <button class="btn btn-lg btn-color orange btn-padding btn-margin" type="button">Orange</button>
+        <button class="btn btn-lg btn-color yellow btn-padding btn-margin" type="button">Yellow</button>
+        <button class="btn btn-lg btn-color gray btn-padding btn-margin" type="button">Gray</button>
+        <button class="btn btn-lg btn-color red btn-padding btn-margin" type="button">Red</button>
+        <button class="btn btn-lg btn-color green btn-padding btn-margin" type="button">Green</button>
+      </p>
+
+      <p>para mayúsculas incorporar a los botones clase "uppercase"</p>
+      <p>
+        <button class="btn btn-lg btn-color pink btn-padding btn-margin uppercase" type="button">Pink</button>
+        <button class="btn btn-lg btn-color purple btn-padding btn-margin uppercase" type="button">Purple</button>
+        <button class="btn btn-lg btn-color orange btn-padding btn-margin uppercase" type="button">Orange</button>
+        <button class="btn btn-lg btn-color yellow btn-padding btn-margin uppercase" type="button">Yellow</button>
+        <button class="btn btn-lg btn-color gray btn-padding btn-margin uppercase" type="button">Gray</button>
+        <button class="btn btn-lg btn-color red btn-padding btn-margin uppercase" type="button">Red</button>
+        <button class="btn btn-lg btn-color green btn-padding btn-margin uppercase" type="button">Green</button>
+      </p>
+      <p>
+        <button class="btn btn-color pink btn-padding btn-margin uppercase" type="button">Pink</button>
+        <button class="btn btn-color purple btn-padding btn-margin uppercase" type="button">Purple</button>
+        <button class="btn btn-color orange btn-padding btn-margin uppercase" type="button">Orange</button>
+        <button class="btn btn-color yellow btn-padding btn-margin uppercase" type="button">Yellow</button>
+        <button class="btn btn-color gray btn-padding btn-margin uppercase" type="button">Gray</button>
+        <button class="btn btn-color red btn-padding btn-margin uppercase" type="button">Red</button>
+        <button class="btn btn-color green btn-padding btn-margin uppercase" type="button">Green</button>
+      </p>
+      <p>
+        <button class="btn btn-sm btn-color pink btn-padding btn-margin uppercase" type="button">Pink</button>
+        <button class="btn btn-sm btn-color purple btn-padding btn-margin uppercase" type="button">Purple</button>
+        <button class="btn btn-sm btn-color orange btn-padding btn-margin uppercase" type="button">Orange</button>
+        <button class="btn btn-sm btn-color yellow btn-padding btn-margin uppercase" type="button">Yellow</button>
+        <button class="btn btn-sm btn-color gray btn-padding btn-margin uppercase" type="button">Gray</button>
+        <button class="btn btn-sm btn-color red btn-padding btn-margin uppercase" type="button">Red</button>
+        <button class="btn btn-sm btn-color green btn-padding btn-margin uppercase" type="button">Green</button>
+      </p>
+      <p>
+        <button class="btn btn-xs btn-color pink btn-padding btn-margin uppercase" type="button">Pink</button>
+        <button class="btn btn-xs btn-color purple btn-padding btn-margin uppercase" type="button">Purple</button>
+        <button class="btn btn-xs btn-color orange btn-padding btn-margin uppercase" type="button">Orange</button>
+        <button class="btn btn-xs btn-color yellow btn-padding btn-margin uppercase" type="button">Yellow</button>
+        <button class="btn btn-xs btn-color gray btn-padding btn-margin uppercase" type="button">Gray</button>
+        <button class="btn btn-xs btn-color red btn-padding btn-margin uppercase" type="button">Red</button>
+        <button class="btn btn-xs btn-color green btn-padding btn-margin uppercase" type="button">Green</button>
+      </p>
+
+
+      <div class="page-header">
+        <h1>Miniaturas</h1>
+      </div>
+      <img alt="200x200" class="img-thumbnail" data-src="holder.js/200x200" style="width: 200px; height: 200px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAFIklEQVR4nO3Y7WoiaRrH4Tn/QykoCkSQIISwrkjYbJCQFcmGIG5GRMJzCvd+8CVpdvhPunuG3mauDxdoKlWPyP2rF39prRXw23750R8A/p8JBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEMhXerq7qaHvaxiGGk/n9fT6dtn2spzV0PfV930Nk1k979/3O2wfazo6buuHcd2uXz+35tu2FtPx8ZjDqK4XD7X/sP1PWZMLgXyF57ur6rquuq6rvu9Or0e12rXaPlyf3vc1Gvrj6/66tq1V269rfN5vNFyOcfty+J01X2s26i7H7U/7dZPb2rc/a00+Esin7ermPGTPh2rtUHdXx6GcLv9di9Mgz9f7am1X8/P7p3293E2Og3q1rNZavdxPj++ny/p1fVvj8aQmk+ta71u13aqmk0lNxpP657/+cRrsaW1aq7Z7rKHrquuGWu3337zm2w//Ln8eAvm0t3pePdRyuapda9Xavhbj40BeL5ens/W41ofj/z8vxtV1XY3nT/U0P76+fjje4hyeFsfBH2a1a681G47HGabzmk1OV4Kr+zrsN/W4XNbD4/PxM7w+nK4io1r9uv6ONX/0d/nzEMi3OGxqfh7kblSP/zkP6+h4FWjtMqCj2bpWs9GHM32r/dP8uO9ofnye2D3W6Hz71HXV9dN6eftyzf3z8nLL1I1v63D4zjX5FIF8pe1q8f4s0E/qcXuotl+fBvzDsC7eh/U8uLPVrlr7MKzD/HI2f7mdXAK5ftx9WPNQD7PxZdswvavX1v6QNfl9AvkKu/XiMqhXi8c6XLadb5P6ut8e/3Z/ej65We0uwzrcrI7Hebx5vxK09sUD9flBe3M69uPN+QF7XHdf/Ar1nWvyKQL5tH3Nh/chHsbjGg1DDX1f0/uXWs9HpzP0tBbz869do1rtW71t7k7vh7qezy4xTB+21dq+bk/PMsPkuq7OzyPXD/W2vX+PputrPB7VMAzV91e13rfvWPNHf5c/D4F81uGpJh/P8h+MZutq7bUWl+eS40DPV+/D+Hw3/XKfm2UdWqvN/Xmwx8fBfnq/Sv397m+/ud77bdW3rfnDv8ufiED+YLvtpjabTb0e/nfbYfdam82mtq/7n37NvwqBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBD8F8lUu5EGtOp+AAAAAElFTkSuQmCC">
+
+
+      <div class="page-header">
+        <h1>Dropdown menus</h1>
+      </div>
+      <div class="dropdown theme-dropdown clearfix">
+        <a data-toggle="dropdown" class="sr-only dropdown-toggle" role="button" href="#" id="dropdownMenu1">Dropdown <b class="caret"></b></a>
+        <ul aria-labelledby="dropdownMenu1" role="menu" class="dropdown-menu">
+          <li role="presentation" class="active"><a href="#" tabindex="-1" role="menuitem">Action</a></li>
+          <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Another action</a></li>
+          <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Something else here</a></li>
+          <li class="divider" role="presentation"></li>
+          <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Separated link</a></li>
+        </ul>
+      </div>
+
+
+
+
+      <div class="page-header">
+        <h1>Navbars</h1>
+      </div>
+
+      <div class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Project name</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+      <div class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Project name</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+
+
+      <div class="page-header">
+        <h1>Alertas</h1>
+      </div>
+      <div class="alert alert-success">
+        <strong>Well done!</strong> You successfully read this important alert message.
+      </div>
+      <div class="alert alert-info">
+        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+      </div>
+      <div class="alert alert-warning">
+        <strong>Warning!</strong> Best check yo self, you're not looking too good.
+      </div>
+      <div class="alert alert-danger">
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+      </div>
+
+
+
+      <div class="page-header">
+        <h1>Barras de progreso</h1>
+      </div>
+      <div class="progress">
+        <div style="width: 60%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar"><span class="sr-only">60% Complete</span></div>
+      </div>
+      <div class="progress">
+        <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-success"><span class="sr-only">40% Complete (success)</span></div>
+      </div>
+      <div class="progress">
+        <div style="width: 20%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" role="progressbar" class="progress-bar progress-bar-info"><span class="sr-only">20% Complete</span></div>
+      </div>
+      <div class="progress">
+        <div style="width: 60%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar progress-bar-warning"><span class="sr-only">60% Complete (warning)</span></div>
+      </div>
+      <div class="progress">
+        <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar progress-bar-danger"><span class="sr-only">80% Complete (danger)</span></div>
+      </div>
+      <div class="progress">
+        <div style="width: 35%" class="progress-bar progress-bar-success"><span class="sr-only">35% Complete (success)</span></div>
+        <div style="width: 20%" class="progress-bar progress-bar-warning"><span class="sr-only">20% Complete (warning)</span></div>
+        <div style="width: 10%" class="progress-bar progress-bar-danger"><span class="sr-only">10% Complete (danger)</span></div>
+      </div>
+
+
+
+      <div class="page-header">
+        <h1>Grupos de Listas</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <ul class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+          </ul>
+        </div><!-- /.col-sm-4 -->
+        <div class="col-sm-4">
+          <div class="list-group">
+            <a class="list-group-item active" href="#">
+              Cras justo odio
+            </a>
+            <a class="list-group-item" href="#">Dapibus ac facilisis in</a>
+            <a class="list-group-item" href="#">Morbi leo risus</a>
+            <a class="list-group-item" href="#">Porta ac consectetur ac</a>
+            <a class="list-group-item" href="#">Vestibulum at eros</a>
+          </div>
+        </div><!-- /.col-sm-4 -->
+        <div class="col-sm-4">
+          <div class="list-group">
+            <a class="list-group-item active" href="#">
+              <h4 class="list-group-item-heading">List group item heading</h4>
+              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            </a>
+            <a class="list-group-item" href="#">
+              <h4 class="list-group-item-heading">List group item heading</h4>
+              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            </a>
+            <a class="list-group-item" href="#">
+              <h4 class="list-group-item-heading">List group item heading</h4>
+              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            </a>
+          </div>
+        </div><!-- /.col-sm-4 -->
+      </div>
+
+
+
+      <div class="page-header">
+        <h1>Paneles (alertas de mensajes)</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Panel title</h3>
+            </div>
+            <div class="panel-body">
+              Panel content
+            </div>
+          </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Panel title</h3>
+            </div>
+            <div class="panel-body">
+              Panel content
+            </div>
+          </div>
+        </div><!-- /.col-sm-4 -->
+        <div class="col-sm-4">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">Panel title</h3>
+            </div>
+            <div class="panel-body">
+              Panel content
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Panel title</h3>
+            </div>
+            <div class="panel-body">
+              Panel content
+            </div>
+          </div>
+        </div><!-- /.col-sm-4 -->
+        <div class="col-sm-4">
+          <div class="panel panel-warning">
+            <div class="panel-heading">
+              <h3 class="panel-title">Panel title</h3>
+            </div>
+            <div class="panel-body">
+              Panel content
+            </div>
+          </div>
+          <div class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title">Panel title</h3>
+            </div>
+            <div class="panel-body">
+              Panel content
+            </div>
+          </div>
+        </div><!-- /.col-sm-4 -->
+      </div>
+
+
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="panel panel-default">
+            <button type="button" class="close" aria-hidden="true">&times;</button>
+            <div class="panel-heading">
+              <h3 class="panel-title">Únete a Wualuck</h3>
+            </div>
+            <div class="panel-body">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, quae, quibusdam, laborum, accusantium consectetur iste beatae <a href="#">quas reprehenderit ipsa nam suscipit magni</a> quos voluptatum neque ducimus natus aut porro delectus?
+            </div>
+            <div class="panel-footer">
+              <a href="#" class="btn btn-primary pull-right">Continuar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+
+
+
+
+      <div class="page-header">
+        <h1>Formularios Wualuck</h1>
+      </div>
+
+      <div id="content-fixed" class="only-menu">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="light bigger">Notificaciones</h1>
+          </div>
+        </div>
+        <div class="row air-bottom">
+          <!-- FORMULARIO DE POSTEO DE RETO -->
+          <div class="col-md-7">
+            <form role="form" class="uppercase form-challenge">
+              <h2 class="uppercase medium-xs color dark-green strong">Mensajería</h2>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Desactivar notificaciones de correo electrónico
+                </label>
+              </div>
+              <h2 class="uppercase medium-xs color dark-green strong">Envíame mails cuando la gente se contacta con mi perfil</h2>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, eum dolor mollitia veniam cumque a rem temporibus illo repellendus odit.
+                </label>
+                <label>
+                  <input type="checkbox" value="">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, eum dolor mollitia veniam cumque a rem temporibus illo repellendus odit.
+                </label>
+                <label>
+                  <input type="checkbox" value="">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, eum dolor mollitia veniam cumque a rem temporibus illo repellendus odit.
+                </label>
+                <label>
+                  <input type="checkbox" value="">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, eum dolor mollitia veniam cumque a rem temporibus illo repellendus odit.
+                </label>
+                <label>
+                  <input type="checkbox" value="">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, eum dolor mollitia veniam cumque a rem temporibus illo repellendus odit.
+                </label>
+                <label>
+                  <input type="checkbox" value="">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, eum dolor mollitia veniam cumque a rem temporibus illo repellendus odit.
+                </label>
+              </div>
+              <button type="submit" class="air-top btn btn-default btn-color purple uppercase w-20">Guardar</button>
+            </form>
+          </div>
+          <!-- VISUALIZACIÓN -->
+          <div class="col-md-5">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="img/flecha.png" class="wide-image">
+              </div>
+            </div>
+          </div>
+          <!-- -->
+        </div>
+      </div>
+
+      <div id="content-fixed" class="only-menu">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="light bigger">Perfil</h1>
+          </div>
+        </div>
+        <div class="row air-bottom">
+          <!-- FORMULARIO DE POSTEO DE RETO -->
+          <div class="col-md-7">
+            <form role="form" class="uppercase form-challenge">
+              <h2 class="uppercase medium-xs color dark-green strong">Nombre completo</h2>
+              <div class="form-group">
+                <label for="nombreApellido">Escribe tu primer nombre + tu apellido paterno</label>
+                <input type="text" class="form-control" id="nombreApellido" placeholder="">
+              </div>
+              <span>
+                <a href="#">Subir imagen de perfil</a> (formato jpg o png de 400 x 400 píxeles)
+              </span>
+              <br>
+              <span>
+                <a href="#">Subir imagen de fondo de mi perfil</a> (formato jpg o png de 560 x 900 píxeles)
+              </span>
+              <h2 class="uppercase medium-xs color dark-green strong">Fecha de nacimiento</h2>
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label for="fechaNacimiento">Día / Mes / Año</label>
+                    <input type="text" class="form-control" id="fechaNacimiento" placeholder="dd/mm/aaaa">
+                    <a href="#" class="small normalcase">¿qué es esto?</a>
+                  </div>
+                </div>
+              </div>
+              <h2 class="uppercase medium-xs color dark-green strong">Nombre de usuario</h2>
+              <div class="form-group">
+                <label for="nombreUsuario">Escribe tu nombre de usuario (ej: nombre.apellido)</label>
+                <input type="text" class="form-control" id="nombreUsuario" placeholder="Ej: Maria.reyes o ave.fenix">
+              </div>
+              <h2 class="uppercase medium-xs color dark-green strong">Correo electrónico</h2>
+              <div class="form-group">
+                <label for="correoElectronico">Correo electrónico asociado a mi cuenta <a href="#" class="small normalcase">(cambiar)</a></label>
+                <input type="text" class="form-control" id="correoElectronico" placeholder="correo@wualuck.com">
+              </div>
+              <h2 class="uppercase medium-xs color dark-green strong">Contraseña de tu cuenta</h2>
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label for="escribeTuReto">Actual contraseña</label>
+                    <input type="text" class="form-control" id="escribeTuReto" placeholder="">
+                  </div>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                  <div class="form-group">
+                    <label for="escribeTuReto">Nueva contraseña</label>
+                    <input type="text" class="form-control" id="escribeTuReto" placeholder="">
+                  </div>
+                </div>
+              </div>
+              <h2 class="uppercase medium-xs color dark-green strong">Eliminar tu cuenta</h2>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  aplicarme
+                </label>
+              </div>
+            </form>
+          </div>
+          <!-- VISUALIZACIÓN -->
+          <div class="col-md-5">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="img/flecha.png" class="wide-image">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <nav>
+                  <ul class="nav uppercase social-links half-links">
+                    <li>
+                      <a href="#" class="btn btn-color gray">editar</a>
+                    </li>
+                    <li>
+                      <a href="#" class="btn btn-color purple">guardar</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <!-- -->
+        </div>
+      </div>
+
+      <div id="content-fixed" class="only-menu">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="light bigger">Postear un reto_</h1>
+          </div>
+        </div>
+        <div class="row air-bottom">
+          <!-- FORMULARIO DE POSTEO DE RETO -->
+          <div class="col-md-7">
+            <form role="form" class="uppercase form-challenge">
+              <h2 class="uppercase medium-xs color dark-green strong">Descripción del reto</h2>
+              <div class="form-group">
+                <label for="escribeTuReto">Escribe tu reto (xxx caracteres disponibles)</label>
+                <input type="text" class="form-control" id="escribeTuReto" placeholder="">
+              </div>
+              <span>
+                <a href="#">Subir imagen del reto</a> (formato jpg o png de 400 x 400 píxeles)
+              </span>
+              <br>
+              <span>
+                <a href="#">Subir imagen logo de la marca del reto</a> (formato jpg o png de 64 x 64 píxeles)
+              </span>
+              <h2 class="uppercase medium-xs color dark-green strong">Requisitos del reto</h2>
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label for="escribeTuReto">Número de participantes</label>
+                    <input type="text" class="form-control" id="escribeTuReto" placeholder="">
+                    <a href="#" class="small normalcase">¿qué es esto?</a>
+                  </div>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                  <div class="form-group">
+                    <label for="escribeTuReto">días de plazo a cumplir</label>
+                    <input type="text" class="form-control" id="escribeTuReto" placeholder="">
+                    <a href="#" class="small normalcase">¿qué es esto?</a>
+                  </div>
+                </div>
+              </div>
+              <h2 class="uppercase medium-xs color dark-green strong">Redes Sociales</h2>
+              <strong>facebook</strong>
+              <br>
+              <span>invitar a hacerse fan de la marca de mi reto en el post</span>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Me gusta
+                </label>
+              </div>
+              <strong>twitter</strong>
+              <br>
+              <span>invitar a seguir la marca de mi reto en el post</span>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Seguir
+                </label>
+              </div>
+              <h2 class="uppercase medium-xs color dark-green strong">Plataforma de viralización</h2>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox1" value="option1"> Facebook
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox2" value="option2"> Twitter
+              </label>
+              <h2 class="uppercase medium-xs color dark-green strong">Términos y condiciones</h2>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  aplicarme
+                </label>
+              </div>
+            </form>
+          </div>
+          <!-- VISUALIZACIÓN -->
+          <div class="col-md-5">
+            <h2 class="uppercase medium-xs color dark-green strong">Previsualización del muro en la plataforma</h2>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="square">
+                  <div class="box-categories">
+                    <!-- -->
+                    <a href="#" class="brand-box">
+                      <img src="img/temp/img-brand/bertelli.png" class="wide-image">
+                    </a>
+                    <!-- INTERACCIONES CONCURSOS -->
+                    <div class="bottom-interactive">
+                      <span class="sentence-wualuck w-100 text-center">
+                        50% de descuento. Lorem ipsum dolor.
+                      </span>
+                      <span class="views left text-center uppercase w-33"><span class="number-views strong">35%</span> logrado</span>
+                      <span class="views left gray text-center uppercase w-33"><span class="number-views strong">800</span> wualucks</span>
+                      <span class="views left text-center uppercase w-33"><span class="number-views strong">7</span> días</span>
+                    </div>
+                    <!-- -->
+                    <img src="img/temp/img-products/product-2.jpg" class="wide-image">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <nav>
+                  <ul class="nav uppercase social-links half-links">
+                    <li>
+                      <a href="#" class="btn btn-color gray">editar</a>
+                    </li>
+                    <li>
+                      <a href="#" class="btn btn-color purple">guardar</a>
+                    </li>
+                    <li>
+                      <a href="#" class="btn btn-color red">publicar</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <!-- -->
+        </div>
+      </div>
+
+
+      <div id="content-fixed" class="only-menu">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="light bigger">Privacidad</h1>
+          </div>
+        </div>
+        <div class="row air-bottom">
+          <!-- FORMULARIO DE POSTEO DE RETO -->
+          <div class="col-md-7">
+            <form role="form" class="uppercase form-challenge">
+              <h2 class="uppercase medium-xs color dark-green strong">Público</h2>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  cualquiera puede ver mi cuenta
+                </label>
+              </div>
+              <h2 class="uppercase medium-xs color dark-green strong">Restringido</h2>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, eum dolor mollitia veniam cumque a rem temporibus illo repellendus odit.
+                </label>
+                <label>
+                  <input type="checkbox" value="">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, eum dolor mollitia veniam cumque a rem temporibus illo repellendus odit.
+                </label>
+              </div>
+              <button type="submit" class="air-top btn btn-default btn-color purple uppercase w-20">Guardar</button>
+            </form>
+          </div>
+          <!-- VISUALIZACIÓN -->
+          <div class="col-md-5">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="img/flecha.png" class="wide-image">
+              </div>
+            </div>
+          </div>
+          <!-- -->
+        </div>
+      </div>
+
+      <div id="content-fixed" class="only-menu">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="light bigger">Registro</h1>
+          </div>
+        </div>
+        <div class="row air-bottom">
+          <!-- FORMULARIO DE POSTEO DE RETO -->
+          <div class="col-md-7">
+            <form role="form" class="uppercase form-challenge">
+              <h2 class="uppercase medium-xs color dark-green strong">Tipo de Empresa</h2>
+              <div class="form-group">
+                <label for="categoriaEmpresa">Selecciona una categoría</label>
+                <select class="form-control">
+                  <option>Categoría 1</option>
+                  <option>Categoría 2</option>
+                  <option>Categoría 3</option>
+                  <option>Categoría 4</option>
+                  <option>Categoría 5</option>
+                </select>
+              </div>
+              <h2 class="uppercase medium-xs color dark-green strong">Nombre de Contacto</h2>
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label for="escribeTuReto">Nombre</label>
+                    <input type="text" class="form-control" id="escribeTuReto" placeholder="">
+                  </div>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                  <div class="form-group">
+                    <label for="escribeTuReto">Apellidos</label>
+                    <input type="text" class="form-control" id="escribeTuReto" placeholder="">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="correoElectronico">Dirección de Correo electrónico </label>
+                <input type="text" class="form-control" id="correoElectronico" placeholder="correo@wualuck.com">
+              </div>
+              <div class="form-group">
+                <label for="escribeTuReto">Contraseña</label>
+                <input type="text" class="form-control" id="escribeTuReto" placeholder="">
+              </div>
+              <h2 class="uppercase medium-xs color dark-green strong">Información de perfil</h2>
+              <div class="form-group">
+                <label for="escribeTuReto">Nombre comercial</label>
+                <input type="text" class="form-control" id="escribeTuReto" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="correoElectronico">Nombre de usuario</label>
+                <input type="text" class="form-control" id="correoElectronico" placeholder="http://wualuck.com">
+              </div>
+              <div class="form-group">
+                <label for="correoElectronico">Acerca de </label>
+                <textarea class="form-control" rows="3"></textarea>
+                <a href="#" class="small normalcase">descripción de tu perfil</a>
+              </div>
+              <div class="form-group">
+                <label for="correoElectronico">Sitio Web</label>
+                <input type="text" class="form-control" id="correoElectronico" placeholder="http://www.wualuck.com">
+              </div>
+              <span>
+                <a href="#">Subir imagen de perfil</a> (formato jpg o png de 400 x 400 píxeles)
+              </span>
+              <h2 class="uppercase medium-xs color dark-green strong">Acuerdo</h2>
+              <div class="form-group">
+                <label for="correoElectronico">Acerca de </label>
+                <textarea class="form-control" rows="3"></textarea>
+                <a href="#" class="small normalcase">descripción de tu perfil</a>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  aceptar condiciones
+                </label>
+              </div>
+              <button type="submit" class="btn btn-default uppercase pull-right">Crear Cuenta</button>
+              
+            </form>
+          </div>
+          <!-- VISUALIZACIÓN -->
+          <!--
+          <div class="col-md-5">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="img/flecha.png" class="wide-image">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <nav>
+                  <ul class="nav uppercase social-links half-links">
+                    <li>
+                      <a href="#" class="btn btn-color gray">editar</a>
+                    </li>
+                    <li>
+                      <a href="#" class="btn btn-color purple">guardar</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          -->
+          <!-- -->
+        </div>
+      </div>
+
+
+      <div id="content-fixed" class="only-menu">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="light bigger">Forma de Pago</h1>
+          </div>
+        </div>
+        <div class="row air-bottom">
+          <!-- FORMULARIO DE POSTEO DE RETO -->
+          <div class="col-md-7">
+            <form role="form" class="uppercase form-challenge">
+              <div class="form-group">
+                <label for="escribeTuReto">Nombre</label>
+                <input type="text" class="form-control" id="escribeTuReto" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="escribeTuReto">Apellidos</label>
+                <input type="text" class="form-control" id="escribeTuReto" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="escribeTuReto">Nº de Tarjeta de Crédito</label>
+                <input type="text" class="form-control" id="escribeTuReto" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="escribeTuReto">Tipo de Tarjeta de Crédito</label>
+                <input type="text" class="form-control" id="escribeTuReto" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="escribeTuReto">Fecha de vencimiento</label>
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="escribeTuReto" placeholder="mes">
+                    </div>
+                  </div>
+                  <div class="col-md-5 col-md-offset-1">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="escribeTuReto" placeholder="año">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label for="escribeTuReto">Código de seguridad</label>
+                    <input type="text" class="form-control" id="escribeTuReto" placeholder="">
+                    <a href="#" class="small normalcase">¿qué es esto?</a>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="form-group">
+                <label for="correoElectronico">Dirección de Facturación 1</label>
+                <input type="text" class="form-control" id="correoElectronico" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="correoElectronico">Dirección de Facturación 2</label>
+                <input type="text" class="form-control" id="correoElectronico" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="escribeTuReto">Ciudad o población</label>
+                <input type="text" class="form-control" id="escribeTuReto" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="escribeTuReto">Estado / provincia / región</label>
+                <input type="text" class="form-control" id="escribeTuReto" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="correoElectronico">Nombre de usuario</label>
+                <input type="text" class="form-control" id="correoElectronico" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="correoElectronico">Código postal</label>
+                <input type="text" class="form-control" id="correoElectronico" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="correoElectronico">País</label>
+                <input type="text" class="form-control" id="correoElectronico" placeholder="">
+              </div>
+
+              <button type="submit" class="btn btn-default uppercase pull-right">Aceptar</button>
+              
+
+
+              
+            </form>
+          </div>
+          <!-- VISUALIZACIÓN -->
+          <!--
+          <div class="col-md-5">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="img/flecha.png" class="wide-image">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <nav>
+                  <ul class="nav uppercase social-links half-links">
+                    <li>
+                      <a href="#" class="btn btn-color gray">editar</a>
+                    </li>
+                    <li>
+                      <a href="#" class="btn btn-color purple">guardar</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          -->
+          <!-- -->
+        </div>
+      </div>
+
+
+
+      <div class="page-header">
+        <h1>Wells</h1>
+      </div>
+      <div class="well">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+      </div>
+
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../docs-assets/js/holder.js"></script>
+  
+
+</body>
+</html>
